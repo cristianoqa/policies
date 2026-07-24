@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Política de privacidad — MensajeTexto</title>
+  <title>Política de privacidad — Misiva</title>
   <style>
     body {
       font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
@@ -25,16 +25,16 @@
   </style>
 </head>
 <body>
-  <h1>Política de privacidad — MensajeTexto</h1>
+  <h1>Política de privacidad — Misiva</h1>
   <p class="meta">
-    <strong>Última actualización:</strong> 14 de julio de 2026<br>
+    <strong>Última actualización:</strong> 24 de julio de 2026<br>
     <strong>Contacto:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>
   </p>
 
   <h2>Resumen</h2>
   <p>
-    MensajeTexto es una aplicación Android que genera mensajes con Google Gemini y los envía por WhatsApp
-    según programaciones que tú defines. Los datos se procesan y almacenan <strong>en tu dispositivo</strong>.
+    Misiva (antes MensajeTexto) es una aplicación Android que genera mensajes con Google Gemini y los envía por WhatsApp
+    según envíos programados que tú defines. Los datos se procesan y almacenan <strong>en tu dispositivo</strong>.
     No operamos servidores propios que reciban tus mensajes.
   </p>
 
@@ -46,9 +46,10 @@
     <tbody>
       <tr><td>Teléfonos de destinatarios</td><td>Enviar mensajes por WhatsApp</td><td>Base de datos local</td></tr>
       <tr><td>Prompts / instrucciones de IA</td><td>Generar textos con Gemini</td><td>Base de datos local</td></tr>
-      <tr><td>API Key de Gemini (opcional)</td><td>Llamadas a la API de Google</td><td>Cifrada en el dispositivo</td></tr>
+      <tr><td>API Key de Gemini</td><td>Llamadas a la API de Google</td><td>Cifrada en el dispositivo</td></tr>
       <tr><td>Historial de envíos</td><td>Mostrar historial en la app</td><td>Base de datos local</td></tr>
-      <tr><td>Preferencias de la app</td><td>Configuración (onboarding, etc.)</td><td>Almacenamiento local</td></tr>
+      <tr><td>Preferencias (idioma, onboarding, confirmación)</td><td>Configuración de la app</td><td>Almacenamiento local</td></tr>
+      <tr><td>Cola de envíos diferidos</td><td>Reintentar si el teléfono estaba bloqueado</td><td>Preferencias locales (TTL limitado)</td></tr>
     </tbody>
   </table>
 
@@ -57,22 +58,23 @@
     <li>No leemos ni almacenamos conversaciones de WhatsApp de terceros.</li>
     <li>No vendemos ni compartimos datos con anunciantes.</li>
     <li>No subimos tus mensajes a nuestros servidores.</li>
+    <li>No usamos analítica de terceros ni publicidad.</li>
   </ul>
 
   <h2>Servicios de terceros</h2>
   <ul>
     <li><strong>Google Gemini API:</strong> si configuras una API Key, los prompts se envían a Google para generar el texto.
       Consulta la <a href="https://policies.google.com/privacy">política de privacidad de Google</a>.</li>
-    <li><strong>WhatsApp:</strong> la app abre WhatsApp en tu dispositivo. MensajeTexto no accede a los servidores de Meta.</li>
+    <li><strong>WhatsApp (Meta):</strong> la app abre WhatsApp en tu dispositivo. Misiva no accede a los servidores de Meta.</li>
   </ul>
 
   <h2>Servicio de accesibilidad</h2>
   <p>
-    MensajeTexto usa un <strong>AccessibilityService</strong> únicamente para automatizar el envío en WhatsApp
-    (rellenar texto y pulsar Enviar). El servicio:
+    Misiva usa un <strong>AccessibilityService</strong> únicamente para automatizar el envío en WhatsApp
+    (localizar el botón Enviar y pulsarlo). El servicio:
   </p>
   <ul>
-    <li>Solo actúa cuando activas el envío automático o confirmas desde una notificación.</li>
+    <li>Solo actúa cuando llega la hora de un envío programado o confirmas desde una notificación.</li>
     <li>No lee pantallas ajenas a WhatsApp para otros fines.</li>
     <li>No transmite contenido de otras apps a servidores externos.</li>
   </ul>
@@ -85,18 +87,20 @@
     </thead>
     <tbody>
       <tr><td>Internet</td><td>Llamadas a Gemini API</td></tr>
-      <tr><td>Notificaciones</td><td>Avisos de mensajes listos o errores</td></tr>
+      <tr><td>Notificaciones</td><td>Avisos de mensajes listos, errores o desbloqueo</td></tr>
       <tr><td>Alarmas exactas</td><td>Envíos programados a la hora indicada</td></tr>
       <tr><td>Inicio tras reinicio</td><td>Reprogramar alarmas tras reiniciar el teléfono</td></tr>
       <tr><td>Servicio en primer plano</td><td>Mantener el envío durante la apertura de WhatsApp</td></tr>
-      <tr><td>Optimización de batería (opcional)</td><td>Solo si lo aceptas desde Diagnóstico</td></tr>
+      <tr><td>Pantalla completa / alertas (si el sistema lo pide)</td><td>Aviso urgente de envío en algunos dispositivos</td></tr>
+      <tr><td>Optimización de batería (opcional)</td><td>Solo si lo aceptas desde Estado</td></tr>
     </tbody>
   </table>
 
   <h2>Retención y eliminación</h2>
   <ul>
     <li>Puedes borrar el historial desde la app.</li>
-    <li>Puedes eliminar programaciones y la API Key en Ajustes.</li>
+    <li>Puedes eliminar envíos programados y la API Key en la app.</li>
+    <li>Los envíos diferidos caducan solos (ventana limitada).</li>
     <li>Desinstalar la app elimina todos los datos locales.</li>
   </ul>
 
