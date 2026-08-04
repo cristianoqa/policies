@@ -1,65 +1,89 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PolÃ­tica de privacidade â€” MyPass</title>
-  <meta name="description" content="PolÃ­tica de privacidade do MyPass (Flow Home Apps)." />
+  <title>Política de privacidade — MyPass</title>
+  <meta name="description" content="Política de privacidade do MyPass (Flow Home Apps)." />
   <style>
     :root { --bg:#f4f7fb; --ink:#0d2847; --muted:#4a5d73; --card:#fff; --accent:#1a6b9a; --line:#d5e0ec; }
     * { box-sizing: border-box; }
-    body { margin:0; font-family:"Segoe UI",system-ui,sans-serif; background:radial-gradient(1200px 500px at 10% -10%,#d9ebf7 0%,transparent 55%),var(--bg); color:var(--ink); line-height:1.55; }
+    body {
+      margin:0;
+      font-family:"Segoe UI",system-ui,sans-serif;
+      background:
+        radial-gradient(1200px 500px at 10% -10%, #d9ebf7 0%, transparent 55%),
+        radial-gradient(900px 400px at 100% 0%, #e8f0e6 0%, transparent 50%),
+        var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
     main { max-width:720px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
-    h1 { font-size:clamp(1.6rem,4vw,2.1rem); margin:0 0 .35rem; }
+    h1 { font-size:clamp(1.6rem,4vw,2.1rem); margin:0 0 .35rem; letter-spacing:-0.02em; }
     .meta { color:var(--muted); font-size:.95rem; }
     nav.langs { display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0 1.5rem; }
-    nav.langs a { color:var(--accent); text-decoration:none; border:1px solid var(--line); background:var(--card); border-radius:999px; padding:.35rem .85rem; font-size:.9rem; }
+    nav.langs a {
+      color:var(--accent); text-decoration:none; border:1px solid var(--line);
+      background:var(--card); border-radius:999px; padding:.35rem .85rem; font-size:.9rem;
+    }
     nav.langs a[aria-current="page"] { background:var(--ink); color:#fff; border-color:var(--ink); }
-    article { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.35rem 1.25rem 1.5rem; }
-    h2 { font-size:1.15rem; margin:1.4rem 0 .45rem; } h2:first-child { margin-top:0; }
-    ul { padding-left:1.2rem; } hr { border:0; border-top:1px solid var(--line); margin:1.25rem 0; }
+    article {
+      background:var(--card); border:1px solid var(--line); border-radius:14px;
+      padding:1.35rem 1.25rem 1.5rem;
+    }
+    h2 { font-size:1.15rem; margin:1.4rem 0 .45rem; }
+    h2:first-child { margin-top:0; }
+    p, li { color:var(--ink); }
+    p { margin:.45rem 0; }
+    ul { padding-left:1.2rem; }
+    table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem; }
+    th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+    th { background:#eef4f9; }
+    hr { border:0; border-top:1px solid var(--line); margin:1.25rem 0; }
     footer { margin-top:1.5rem; color:var(--muted); font-size:.9rem; }
+    a { color:var(--accent); }
   </style>
 </head>
 <body>
   <main>
     <header>
-      <h1>PolÃ­tica de privacidade â€” MyPass</h1>
-      <p class="meta"><strong>ResponsÃ¡vel:</strong> Flow Home Apps Â· <strong>Contato:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Ãšltima atualizaÃ§Ã£o: 4 ago 2026</p>
+      <h1>Política de privacidade — MyPass</h1>
+      <p class="meta"><strong>Responsável:</strong> Flow Home Apps · <strong>Contato:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Última atualização: 4 ago 2026</p>
       <nav class="langs" aria-label="Idioma">
         <a href="./mypass.html">English</a>
-        <a href="./mypass-es.html">EspaÃ±ol</a>
-        <a href="./mypass-pt.html" aria-current="page">PortuguÃªs</a>
+        <a href="./mypass-es.html">Español</a>
+        <a href="./mypass-pt.html" aria-current="page">Português</a>
       </nav>
     </header>
     <article>
-      <h2>O que Ã© o MyPass</h2>
-      <p>O MyPass Ã© um <strong>cofre de senhas cifrado no seu dispositivo</strong>. A <strong>senha mestra</strong> nÃ£o Ã© enviada em texto legÃ­vel. <strong>NÃ£o hÃ¡ reset remoto</strong> por e-mail/SMS; no dispositivo pode usar a <strong>Recovery Key</strong> (se a guardou) e backups cifrados. A <strong>cÃ³pia na nuvem</strong> (Supabase, se ativar) Ã© <strong>opcional</strong> e sÃ³ envia dados <strong>jÃ¡ cifrados</strong>.</p>
+      <h2>O que é o MyPass</h2>
+      <p>O MyPass é um <strong>cofre de senhas cifrado no seu dispositivo</strong>. A <strong>senha mestra</strong> não é enviada em texto legível. <strong>Não há reset remoto</strong> por e-mail/SMS; no dispositivo pode usar a <strong>Recovery Key</strong> (se a guardou) e backups cifrados. A <strong>cópia na nuvem</strong> (Supabase, se ativar) é <strong>opcional</strong> e só envia dados <strong>já cifrados</strong>.</p>
       <hr />
       <h2>Dados que permanecem no dispositivo</h2>
       <ul>
-        <li>Credenciais e senha mestra na memÃ³ria apenas enquanto usa o app.</li>
-        <li>Cofre cifrado e preferÃªncias em armazenamento seguro.</li>
-        <li>Biometria: o SO gere impressÃ£o digital/rosto; o MyPass nÃ£o guarda imagens biomÃ©tricas.</li>
+        <li>Credenciais e senha mestra na memória apenas enquanto usa o app.</li>
+        <li>Cofre cifrado e preferências em armazenamento seguro.</li>
+        <li>Biometria: o SO gere impressão digital/rosto; o MyPass não guarda imagens biométricas.</li>
       </ul>
-      <h2>Se ativar a cÃ³pia na nuvem</h2>
+      <h2>Se ativar a cópia na nuvem</h2>
       <ul>
-        <li><strong>Conta:</strong> identificador de sessÃ£o (e-mail ou OAuth).</li>
-        <li><strong>O que Ã© enviado:</strong> cofre <strong>cifrado</strong> e metadados de revisÃ£o. <strong>NÃ£o</strong> sÃ£o enviadas a senha mestra nem senhas legÃ­veis.</li>
-        <li><strong>Operador do backend:</strong> vocÃª ou quem administra o projeto Supabase ligado ao build.</li>
+        <li><strong>Conta:</strong> identificador de sessão (e-mail ou OAuth).</li>
+        <li><strong>O que é enviado:</strong> cofre <strong>cifrado</strong> e metadatos de revisão. <strong>Não</strong> são enviadas a senha mestra nem senhas legíveis.</li>
+        <li><strong>Operador do backend:</strong> você ou quem administra o projeto Supabase ligado ao build.</li>
       </ul>
-      <h2>PermissÃµes (Android)</h2>
+      <h2>Permissões (Android)</h2>
       <ul>
         <li><strong>Internet:</strong> apenas com sync ou OAuth.</li>
         <li><strong>Biometria:</strong> desbloqueio opcional no dispositivo.</li>
       </ul>
       <h2>Os seus direitos</h2>
-      <p>Pode apagar dados locais com Â«Apagar cofreÂ» ou desinstalando. Para a nuvem, apague a conta ou objetos no Supabase.</p>
+      <p>Pode apagar dados locais com «Apagar cofre» ou desinstalando. Para a nuvem, apague a conta ou objetos no Supabase.</p>
+      <h2>Alterações</h2>
+      <p>Publicaremos atualizações na app e, se necessário, na URL da política no Google Play.</p>
       <h2>Aviso legal</h2>
-      <p>Este texto descreve o funcionamento tÃ©cnico; nÃ£o substitui aconselhamento jurÃ­dico personalizado.</p>
+      <p>Este texto descreve o funcionamento técnico; não substitui aconselhamento jurídico personalizado.</p>
     </article>
-    <footer>Fonte no app: <code>assets/docs/privacy-policy-pt.md</code>.</footer>
+    <footer>Flow Home Apps · MyPass</footer>
   </main>
 </body>
 </html>
-
