@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Política de privacidad — MyPass</title>
+  <meta name="description" content="Política de privacidad de MyPass (Flow Home Apps)." />
+  <style>
+    :root { --bg:#f4f7fb; --ink:#0d2847; --muted:#4a5d73; --card:#fff; --accent:#1a6b9a; --line:#d5e0ec; }
+    * { box-sizing: border-box; }
+    body {
+      margin:0;
+      font-family:"Segoe UI",system-ui,sans-serif;
+      background:
+        radial-gradient(1200px 500px at 10% -10%, #d9ebf7 0%, transparent 55%),
+        radial-gradient(900px 400px at 100% 0%, #e8f0e6 0%, transparent 50%),
+        var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
+    main { max-width:720px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
+    h1 { font-size:clamp(1.6rem,4vw,2.1rem); margin:0 0 .35rem; letter-spacing:-0.02em; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    nav.langs { display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0 1.5rem; }
+    nav.langs a {
+      color:var(--accent); text-decoration:none; border:1px solid var(--line);
+      background:var(--card); border-radius:999px; padding:.35rem .85rem; font-size:.9rem;
+    }
+    nav.langs a[aria-current="page"] { background:var(--ink); color:#fff; border-color:var(--ink); }
+    article {
+      background:var(--card); border:1px solid var(--line); border-radius:14px;
+      padding:1.35rem 1.25rem 1.5rem;
+    }
+    h2 { font-size:1.15rem; margin:1.4rem 0 .45rem; }
+    h2:first-child { margin-top:0; }
+    p, li { color:var(--ink); }
+    p { margin:.45rem 0; }
+    ul { padding-left:1.2rem; }
+    table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem; }
+    th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+    th { background:#eef4f9; }
+    hr { border:0; border-top:1px solid var(--line); margin:1.25rem 0; }
+    footer { margin-top:1.5rem; color:var(--muted); font-size:.9rem; }
+    a { color:var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Política de privacidad — MyPass</h1>
+      <p class="meta"><strong>Responsable:</strong> Flow Home Apps · <strong>Contacto:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Última actualización: 4 ago 2026</p>
+      <nav class="langs" aria-label="Idioma">
+        <a href="./mypass.html">English</a>
+        <a href="./mypass-es.html" aria-current="page">Español</a>
+        <a href="./mypass-pt.html">Português</a>
+      </nav>
+    </header>
+    <article>
+      <h2>Qué es MyPass</h2>
+      <p>MyPass es una <strong>bóveda de contraseñas cifrada en tu dispositivo</strong>. La <strong>contraseña maestra</strong> no la enviamos en texto legible. <strong>No hay reset remoto</strong> por email/SMS; en el dispositivo puedes usar la <strong>Recovery Key</strong> (si la guardaste) y backups cifrados. La <strong>copia en la nube</strong> (Supabase, si la activas) es <strong>opcional</strong> y solo sube datos <strong>ya cifrados</strong>.</p>
+      <hr />
+      <h2>Datos que se quedan en el dispositivo</h2>
+      <ul>
+        <li>Credenciales y contraseña maestra en memoria solo mientras usas la app.</li>
+        <li>Bóveda cifrada y preferencias (auto-bloqueo, idioma, etc.) en almacenamiento seguro.</li>
+        <li>Biometría: el sistema gestiona huella/rostro; MyPass no guarda imágenes biométricas.</li>
+      </ul>
+      <h2>Si activas la copia en la nube</h2>
+      <ul>
+        <li><strong>Cuenta:</strong> identidad de sesión (email o OAuth).</li>
+        <li><strong>Qué se sube:</strong> bóveda <strong>cifrada</strong> y metadatos de revisión. <strong>No</strong> se envía la contraseña maestra ni contraseñas legibles.</li>
+        <li><strong>Operador del backend:</strong> tú o quien administre el proyecto Supabase de la build.</li>
+      </ul>
+      <h2>Permisos (Android)</h2>
+      <ul>
+        <li><strong>Internet:</strong> solo con sync o OAuth.</li>
+        <li><strong>Biometría:</strong> desbloqueo opcional en el dispositivo.</li>
+      </ul>
+      <h2>Tus derechos</h2>
+      <p>Puedes borrar datos locales con «Borrar bóveda» o desinstalando. Para la nube, borra la cuenta u objetos en Supabase según tu política.</p>
+      <h2>Cambios</h2>
+      <p>Publicaremos actualizaciones en la app y, si aplica, en la URL de política de Google Play.</p>
+      <h2>Aviso legal</h2>
+      <p>Este texto describe el funcionamiento técnico; no sustituye asesoramiento jurídico personalizado.</p>
+    </article>
+    <footer>Flow Home Apps · MyPass</footer>
+  </main>
+</body>
+</html>
