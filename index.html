@@ -261,14 +261,12 @@
             <li>Autofill Android y TOTP</li>
             <li>Sync Premium opcional (ciphertext)</li>
           </ul>
-          <a class="cta mypass" id="mypass-apk" href="#mypass-download-help">
+          <a class="cta mypass" id="mypass-apk" href="https://github.com/cristianoqa/policies/releases/download/app-2026-08/mypass-1.1.3-release.apk">
             Descargar versión de pruebas (.APK)
           </a>
           <a class="cta secondary" href="./mypass-es.html">Ver política de privacidad</a>
           <p class="cta-note" id="mypass-download-help">
-            El APK de MyPass se publica en
-            <a href="https://github.com/cristianoqa/policies/releases" rel="noopener">GitHub Releases</a>
-            (archivo grande). Cuando esté subido, este botón enlazará la descarga directa.
+            APK firmado de prueba (v1.1.3). Activa orígenes desconocidos solo para MyPass.
             También llegará a <strong>Google Play</strong>.
           </p>
         </div>
@@ -325,13 +323,14 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-    const MY_PASS_APK_URL = "";
+    const MY_PASS_APK_URL =
+      "https://github.com/cristianoqa/policies/releases/download/app-2026-08/mypass-1.1.3-release.apk";
     const btn = document.getElementById("mypass-apk");
     if (MY_PASS_APK_URL) {
       btn.href = MY_PASS_APK_URL;
-      btn.setAttribute("download", "");
-      document.getElementById("mypass-download-help").textContent =
-        "APK firmado de prueba. Activa orígenes desconocidos solo para MyPass. También llegará a Google Play.";
+      btn.removeAttribute("download"); // GitHub Releases: navegación directa
+      document.getElementById("mypass-download-help").innerHTML =
+        "APK firmado de prueba (v1.1.3). Activa orígenes desconocidos solo para MyPass. También llegará a <strong>Google Play</strong>.";
     }
   </script>
 </body>
