@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Política de privacidade — Misiva</title>
+  <meta name="description" content="Política de privacidade do Misiva (Flow Home Apps)." />
+  <style>
+    :root { --bg:#f4f7fb; --ink:#0d2847; --muted:#4a5d73; --card:#fff; --accent:#1a6b9a; --line:#d5e0ec; }
+    * { box-sizing: border-box; }
+    body {
+      margin:0;
+      font-family:"Segoe UI",system-ui,sans-serif;
+      background:
+        radial-gradient(1200px 500px at 10% -10%, #d9ebf7 0%, transparent 55%),
+        radial-gradient(900px 400px at 100% 0%, #e8f0e6 0%, transparent 50%),
+        var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
+    main { max-width:720px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
+    h1 { font-size:clamp(1.6rem,4vw,2.1rem); margin:0 0 .35rem; letter-spacing:-0.02em; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    nav.langs { display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0 1.5rem; }
+    nav.langs a {
+      color:var(--accent); text-decoration:none; border:1px solid var(--line);
+      background:var(--card); border-radius:999px; padding:.35rem .85rem; font-size:.9rem;
+    }
+    nav.langs a[aria-current="page"] { background:var(--ink); color:#fff; border-color:var(--ink); }
+    article {
+      background:var(--card); border:1px solid var(--line); border-radius:14px;
+      padding:1.35rem 1.25rem 1.5rem;
+    }
+    h2 { font-size:1.15rem; margin:1.4rem 0 .45rem; }
+    h2:first-child { margin-top:0; }
+    p, li { color:var(--ink); }
+    p { margin:.45rem 0; }
+    ul { padding-left:1.2rem; }
+    table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem; }
+    th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+    th { background:#eef4f9; }
+    hr { border:0; border-top:1px solid var(--line); margin:1.25rem 0; }
+    footer { margin-top:1.5rem; color:var(--muted); font-size:.9rem; }
+    a { color:var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Política de privacidade — Misiva</h1>
+      <p class="meta"><strong>Responsável:</strong> Flow Home Apps · <strong>Contato:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Última atualização: 5 ago 2026</p>
+      <nav class="langs" aria-label="Idioma">
+        <a href="./misiva.html">English</a>
+        <a href="./mensajetexto.html">Español</a>
+        <a href="./misiva-pt.html" aria-current="page">Português</a>
+      </nav>
+    </header>
+    <article>
+      <h2>Resumo</h2>
+      <p>Misiva (antes MensajeTexto) é um aplicativo Android que gera mensagens com Google Gemini e as envia pelo WhatsApp conforme agendamentos que você define. Os dados são processados e armazenados <strong>no seu dispositivo</strong>. Não operamos servidores próprios que recebam suas mensagens.</p>
+      <hr />
+      <h2>Dados que processamos</h2>
+      <table>
+        <thead><tr><th>Dado</th><th>Uso</th><th>Armazenamento</th></tr></thead>
+        <tbody>
+          <tr><td>Telefones dos destinatários</td><td>Enviar mensagens pelo WhatsApp</td><td>Base de dados local</td></tr>
+          <tr><td>Contatos do telefone (opcional)</td><td>Autocompletar ao criar um envio</td><td>Leitura no dispositivo; não são enviados</td></tr>
+          <tr><td>Prompts / instruções de IA</td><td>Gerar textos com Gemini</td><td>Base de dados local</td></tr>
+          <tr><td>API Key do Gemini</td><td>Chamadas à API do Google</td><td>Cifrada no dispositivo</td></tr>
+          <tr><td>Histórico de envios</td><td>Mostrar histórico no app</td><td>Base de dados local</td></tr>
+          <tr><td>Preferências (idioma, onboarding, confirmação)</td><td>Configuração do app</td><td>Armazenamento local</td></tr>
+          <tr><td>Fila de envios diferidos</td><td>Tentar de novo se o telefone estava bloqueado</td><td>Preferências locais (TTL limitado)</td></tr>
+        </tbody>
+      </table>
+      <h2>Dados que NÃO recolhemos</h2>
+      <ul>
+        <li>Não lemos nem armazenamos conversas de WhatsApp de terceiros.</li>
+        <li>Não vendemos nem partilhamos dados com anunciantes.</li>
+        <li>Não enviamos as suas mensagens para os nossos servidores.</li>
+        <li>Não usamos analítica de terceiros nem publicidade.</li>
+      </ul>
+      <h2>Serviços de terceiros</h2>
+      <ul>
+        <li><strong>Google Gemini API:</strong> se configurar uma API Key, os prompts são enviados à Google para gerar o texto. Consulte a <a href="https://policies.google.com/privacy">política de privacidade da Google</a>.</li>
+        <li><strong>WhatsApp (Meta):</strong> o app abre o WhatsApp no seu dispositivo. O Misiva não acede aos servidores da Meta.</li>
+      </ul>
+      <h2>Serviço de acessibilidade</h2>
+      <p>O Misiva usa um <strong>AccessibilityService</strong> apenas para automatizar o envio no WhatsApp (localizar o botão Enviar e tocá-lo). O serviço:</p>
+      <ul>
+        <li>Só atua quando chega a hora de um envio agendado ou confirma a partir de uma notificação.</li>
+        <li>Não lê ecrãs alheios ao WhatsApp para outros fins.</li>
+        <li>Não transmite conteúdo de outras apps para servidores externos.</li>
+      </ul>
+      <p>Deve ativar o serviço manualmente em Definições → Acessibilidade.</p>
+      <h2>Permissões</h2>
+      <table>
+        <thead><tr><th>Permissão</th><th>Motivo</th></tr></thead>
+        <tbody>
+          <tr><td>Internet</td><td>Chamadas à API Gemini</td></tr>
+          <tr><td>Notificações</td><td>Avisar quando uma mensagem está pronta, falha ou é preciso desbloquear</td></tr>
+          <tr><td>Alarmes exatos</td><td>Disparar envios agendados à hora indicada</td></tr>
+          <tr><td>Início após reinício</td><td>Reprogramar alarmes após reiniciar o telefone</td></tr>
+          <tr><td>Serviço em primeiro plano</td><td>Manter o envio ativo enquanto o WhatsApp abre</td></tr>
+          <tr><td>Contactos (opcional)</td><td>Só se ativar «Usar a minha agenda»</td></tr>
+        </tbody>
+      </table>
+      <h2>Retenção e eliminação</h2>
+      <ul>
+        <li>Pode apagar o histórico, envios agendados e a API Key na app.</li>
+        <li>Os envios diferidos caducam sozinhos (janela limitada).</li>
+        <li>Desinstalar a app elimina todos os dados locais.</li>
+      </ul>
+      <h2>Cópias de segurança</h2>
+      <p><code>allowBackup=false</code>: os dados da app não entram nas cópias de segurança da Google por predefinição.</p>
+      <h2>Menores</h2>
+      <p>A app não se destina a menores de 13 anos.</p>
+      <h2>Alterações</h2>
+      <p>Publicaremos alterações antes de releases relevantes. A data de atualização aparece acima.</p>
+    </article>
+    <footer>Flow Home Apps · Misiva</footer>
+  </main>
+</body>
+</html>
