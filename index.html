@@ -142,13 +142,22 @@
       display: flex; flex-direction: column; align-items: center; gap: 0.65rem;
       position: relative; z-index: 1;
     }
-    /* Mismo patrón Misiva / MyPass: logo limpio + nombre debajo */
+    /* Mismo patrón: icono limpio + nombre debajo (el nombre NO va dentro del PNG) */
     .app-visual img {
       width: min(38%, 132px); height: auto;
       border-radius: 28px;
       box-shadow: 0 14px 28px rgba(0,0,0,0.28);
       background: transparent;
       padding: 0;
+      border: none;
+      outline: none;
+    }
+    .app-visual.mypass img {
+      /* Icono foreground: sin caja/borde del logo comercial con texto */
+      border-radius: 0;
+      box-shadow: none;
+      width: min(46%, 160px);
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.35));
     }
     .app-visual .wordmark {
       font-family: Fraunces, Georgia, serif; color: #fff; font-size: 1.55rem;
@@ -203,32 +212,42 @@
     section.block .section-kicker { display: block; }
     section.block h2 {
       font-family: Fraunces, Georgia, serif; font-size: 1.45rem; margin: 0.2rem 0 0.75rem; letter-spacing: -0.02em;
+      color: var(--ink);
     }
     section.block p { margin: 0; color: var(--ink-soft); }
     section.block p + p { margin-top: 0.65rem; }
 
-    .support {
-      background: linear-gradient(145deg, #071521 0%, #0c1f33 40%, #124868 100%);
-      color: #f4f8fa; border: none;
+    /* Más específico que section.block para que el fondo oscuro gane */
+    section.block.support {
+      background: linear-gradient(145deg, #071521 0%, #0c1f33 42%, #124868 100%);
+      color: #f4f8fa;
+      border: 1px solid #1a3a55;
       box-shadow: 0 20px 44px rgba(7, 21, 33, 0.28);
     }
-    .support .section-kicker {
+    section.block.support .section-kicker {
       color: var(--support-cta);
     }
-    .support h2 { color: #fff; margin-top: 0.15rem; }
-    .support p { color: rgba(244,248,250,0.9); }
-    .support-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
-    .support .cta.kofi {
+    section.block.support h2 {
+      color: #ffffff;
+      margin-top: 0.15rem;
+    }
+    section.block.support p {
+      color: rgba(244, 248, 250, 0.92);
+    }
+    section.block.support .support-actions {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem;
+    }
+    section.block.support .cta.kofi {
       background: var(--support-cta);
       color: #0c1f33;
       min-width: min(100%, 240px);
       box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
-    .support .cta.kofi:hover { filter: brightness(1.05); }
-    .support .cta.paypal {
-      background: #fff;
+    section.block.support .cta.kofi:hover { filter: brightness(1.05); }
+    section.block.support .cta.paypal {
+      background: #ffffff;
       color: #0c1f33;
-      border: none;
+      border: 2px solid #ffffff;
       font-weight: 700;
     }
 
