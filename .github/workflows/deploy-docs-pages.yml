@@ -1,4 +1,4 @@
-name: Deploy docs to Pages
+﻿name: Deploy docs to Pages
 
 on:
   push:
@@ -17,12 +17,13 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    # Sin environment para evitar Waiting eterno por reviewers.
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
-      - name: Upload docs site
-        uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: docs
       - id: deployment
