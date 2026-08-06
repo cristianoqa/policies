@@ -174,14 +174,22 @@
       display: flex; flex-direction: column; align-items: center; gap: 0.65rem;
       position: relative; z-index: 1;
     }
+    /* Misma huella visual para ambas apps (evita que un mark “llene” más que el otro) */
     .app-visual img, .app-visual .app-mark {
-      width: min(38%, 132px); height: auto;
-      border-radius: 28px;
+      width: 112px;
+      height: 112px;
+      object-fit: contain;
+      border-radius: 26px;
       box-shadow: 0 14px 28px rgba(0,0,0,0.28);
       background: transparent;
       padding: 0;
       border: none;
       outline: none;
+    }
+    @media (max-width: 480px) {
+      .app-visual img, .app-visual .app-mark {
+        width: 96px; height: 96px; border-radius: 22px;
+      }
     }
     .app-visual .wordmark {
       font-family: Fraunces, Georgia, serif; color: #fff; font-size: 1.55rem;
@@ -322,7 +330,7 @@
         <article class="app-card reveal" style="--d:140ms" aria-labelledby="misiva-title">
           <div class="app-visual misiva" aria-hidden="true">
             <div class="visual-stack">
-              <img src="./assets/misiva-icon.webp" width="132" height="132" alt="" />
+              <img src="./assets/misiva-icon.webp" width="112" height="112" alt="" />
               <p class="wordmark">Misiva</p>
             </div>
           </div>
@@ -355,7 +363,7 @@
         <article class="app-card mypass-card reveal" style="--d:220ms" aria-labelledby="mypass-title">
           <div class="app-visual mypass" aria-hidden="true">
             <div class="visual-stack">
-              <img class="app-mark" src="./assets/mypass-mark.svg" width="132" height="132" alt="" />
+              <img class="app-mark" src="./assets/mypass-mark.svg?v=114" width="112" height="112" alt="" decoding="async" />
               <p class="wordmark">MyPass</p>
             </div>
           </div>
@@ -369,7 +377,7 @@
             <div class="badge-row" aria-label="Estado MyPass">
               <span class="badge play">Próximamente en Google Play</span>
               <span class="badge apk">APK de prueba</span>
-              <span class="badge">v1.1.3</span>
+              <span class="badge">v1.1.4</span>
             </div>
             <ul class="benefits">
               <li>Contraseña maestra solo en tu móvil</li>
