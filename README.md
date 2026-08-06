@@ -1,16 +1,5 @@
-﻿# Flow Home Apps — sitio público
+﻿# Flow Home Apps
 
-**Landing:** https://cristianoqa.github.io/policies/
+Sitio: https://cristianoqa.github.io/policies/
 
-| Ruta | Contenido |
-|------|-----------|
-| `index.html` | Landing (Misiva + MyPass + Ko-fi) |
-| `mensajetexto.html` / `misiva*.html` | Privacidad Misiva |
-| `mypass*.html` | Privacidad MyPass |
-| `downloads/` | APK Misiva (MyPass → Releases) |
-
-## MyPass APK (~55 MB)
-
-1. GitHub → **cristianoqa/policies** → **Releases** → New release  
-2. Sube `mypass-1.1.3-release.apk`  
-3. En `index.html`, pon la URL en `MY_PASS_APK_URL`
+Si ves esta página en vez de la landing, el deploy de GitHub Pages aún no terminó. Espera o revisa Actions → pages-build-deployment.
