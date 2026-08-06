@@ -21,7 +21,6 @@
       --accent-2: #1a6b9a;
       --misiva: #0e7a6b;
       --mypass: #156089;
-      --support-cta: #f0c14b;
       --radius: 18px;
       --shadow: 0 18px 40px rgba(12, 31, 51, 0.08);
     }
@@ -142,7 +141,7 @@
       display: flex; flex-direction: column; align-items: center; gap: 0.65rem;
       position: relative; z-index: 1;
     }
-    /* Mismo patrón: icono limpio + nombre debajo (el nombre NO va dentro del PNG) */
+    /* Patrón único: squircle de app + wordmark HTML (nunca texto dentro del PNG) */
     .app-visual img {
       width: min(38%, 132px); height: auto;
       border-radius: 28px;
@@ -151,13 +150,6 @@
       padding: 0;
       border: none;
       outline: none;
-    }
-    .app-visual.mypass img {
-      /* Icono foreground: sin caja/borde del logo comercial con texto */
-      border-radius: 0;
-      box-shadow: none;
-      width: min(46%, 160px);
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.35));
     }
     .app-visual .wordmark {
       font-family: Fraunces, Georgia, serif; color: #fff; font-size: 1.55rem;
@@ -217,38 +209,25 @@
     section.block p { margin: 0; color: var(--ink-soft); }
     section.block p + p { margin-top: 0.65rem; }
 
-    /* Más específico que section.block para que el fondo oscuro gane */
-    section.block.support {
-      background: linear-gradient(145deg, #071521 0%, #0c1f33 42%, #124868 100%);
-      color: #f4f8fa;
-      border: 1px solid #1a3a55;
-      box-shadow: 0 20px 44px rgba(7, 21, 33, 0.28);
-    }
-    section.block.support .section-kicker {
-      color: var(--support-cta);
-    }
-    section.block.support h2 {
-      color: #ffffff;
-      margin-top: 0.15rem;
-    }
-    section.block.support p {
-      color: rgba(244, 248, 250, 0.92);
-    }
+    /* Apoyar = mismo bloque blanco que Transparencia; el acento vive en los CTA */
     section.block.support .support-actions {
       display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem;
     }
     section.block.support .cta.kofi {
-      background: var(--support-cta);
-      color: #0c1f33;
+      background: var(--mypass);
+      color: #fff;
       min-width: min(100%, 240px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     }
-    section.block.support .cta.kofi:hover { filter: brightness(1.05); }
+    section.block.support .cta.kofi:hover { filter: brightness(1.07); }
     section.block.support .cta.paypal {
-      background: #ffffff;
-      color: #0c1f33;
-      border: 2px solid #ffffff;
-      font-weight: 700;
+      background: #fff;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      font-weight: 600;
+    }
+    section.block.support .cta.paypal:hover {
+      background: #f5f8fa;
+      filter: none;
     }
 
     footer { padding: 2rem 0 2.75rem; color: var(--muted); font-size: 0.88rem; }
@@ -329,7 +308,7 @@
         <article class="app-card mypass-card">
           <div class="app-visual mypass" aria-hidden="true">
             <div class="visual-stack">
-              <img src="./assets/mypass-icon.png" width="160" height="160" alt="" />
+              <img src="./assets/mypass-mark.png" width="132" height="132" alt="" />
               <p class="wordmark">MyPass</p>
             </div>
           </div>
