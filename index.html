@@ -6,6 +6,21 @@
   <title>Flow Home Apps — Herramientas para tu día a día</title>
   <meta name="description" content="Misiva y MyPass: apps Android locales de Flow Home Apps. Descarga de prueba mientras llegan a Google Play." />
   <meta name="theme-color" content="#0c1f33" />
+  <link rel="canonical" href="https://cristianoqa.github.io/policies/" />
+  <link rel="icon" href="./assets/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="./assets/favicon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cristianoqa.github.io/policies/" />
+  <meta property="og:title" content="Flow Home Apps — Misiva + MyPass" />
+  <meta property="og:description" content="Apps Android locales. APKs de prueba firmados mientras llegan a Google Play." />
+  <meta property="og:image" content="https://cristianoqa.github.io/policies/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Flow Home Apps — Misiva + MyPass" />
+  <meta name="twitter:description" content="Apps Android locales. APKs de prueba firmados mientras llegan a Google Play." />
+  <meta name="twitter:image" content="https://cristianoqa.github.io/policies/assets/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -23,6 +38,7 @@
       --mypass: #156089;
       --radius: 18px;
       --shadow: 0 18px 40px rgba(12, 31, 51, 0.08);
+      --focus: #1a6b9a;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -40,6 +56,21 @@
     img { max-width: 100%; display: block; }
     .wrap { width: min(980px, calc(100% - 2rem)); margin: 0 auto; }
 
+    .skip-link {
+      position: absolute; left: 1rem; top: -100px; z-index: 100;
+      background: var(--ink); color: #fff; padding: 0.65rem 1rem;
+      border-radius: 10px; font-weight: 700; text-decoration: none;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    :focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+    .cta:focus-visible, .nav-links a:focus-visible {
+      outline-offset: 2px;
+    }
+
     .hero { padding: 2.5rem 0 1.25rem; }
     .brand-row {
       display: flex; align-items: center; justify-content: space-between;
@@ -54,15 +85,17 @@
       font-size: clamp(1.35rem, 3.2vw, 1.75rem);
       font-weight: 700; letter-spacing: -0.02em; margin: 0.15rem 0 0; color: var(--ink);
     }
-    .nav-links { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .nav-links { display: flex; gap: 0.55rem; flex-wrap: wrap; }
     .nav-links a {
       text-decoration: none; color: var(--ink-soft); font-weight: 600;
-      font-size: 0.92rem; padding: 0.45rem 0.85rem; border-radius: 999px;
+      font-size: 0.95rem;
+      min-height: 44px; min-width: 44px;
+      padding: 0.65rem 1rem; border-radius: 999px;
       border: 1px solid var(--line); background: rgba(255,255,255,0.75);
+      display: inline-flex; align-items: center; justify-content: center;
     }
     .nav-links a:hover { border-color: var(--ink-soft); color: var(--ink); }
 
-    /* Hero a ancho completo, centrado, más visible */
     .hook {
       width: 100%;
       text-align: center;
@@ -86,20 +119,20 @@
       max-width: 42rem;
     }
 
+    /* Scroll-triggered motion (stagger via --d) */
     .reveal {
-      opacity: 0; transform: translateY(14px);
-      animation: rise 0.7s ease forwards;
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+      transition-delay: var(--d, 0ms);
     }
-    .reveal.d2 { animation-delay: 0.12s; }
-    .reveal.d3 { animation-delay: 0.22s; }
-    @keyframes rise { to { opacity: 1; transform: none; } }
+    .reveal.is-in {
+      opacity: 1;
+      transform: none;
+    }
 
-    .section {
-      margin: 2.5rem 0 0;
-    }
-    .section-head {
-      margin: 0 0 1.1rem;
-    }
+    .section { margin: 2.5rem 0 0; }
+    .section-head { margin: 0 0 1.1rem; }
     .section-kicker {
       display: inline-block;
       font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
@@ -141,8 +174,7 @@
       display: flex; flex-direction: column; align-items: center; gap: 0.65rem;
       position: relative; z-index: 1;
     }
-    /* Patrón único: squircle de app + wordmark HTML (nunca texto dentro del PNG) */
-    .app-visual img {
+    .app-visual img, .app-visual .app-mark {
       width: min(38%, 132px); height: auto;
       border-radius: 28px;
       box-shadow: 0 14px 28px rgba(0,0,0,0.28);
@@ -159,6 +191,10 @@
     .app-body {
       padding: 1.25rem 1.25rem 1.4rem; display: flex; flex-direction: column;
       gap: 0.75rem; flex: 1;
+    }
+    .app-title {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
     }
     .app-eyebrow {
       font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
@@ -185,10 +221,12 @@
     .cta {
       display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
       text-decoration: none; font-weight: 700; font-size: 0.98rem;
+      min-height: 48px;
       padding: 0.88rem 1.05rem; border-radius: 12px; color: #fff; background: var(--misiva);
       transition: filter 0.2s ease, transform 0.2s ease;
     }
     .cta:hover { filter: brightness(1.07); transform: translateY(-1px); }
+    .cta:active { transform: translateY(0); }
     .cta.mypass { background: var(--mypass); }
     .cta.secondary {
       background: #fff; color: var(--ink); border: 1px solid var(--line);
@@ -209,7 +247,6 @@
     section.block p { margin: 0; color: var(--ink-soft); }
     section.block p + p { margin-top: 0.65rem; }
 
-    /* Apoyar = mismo bloque blanco que Transparencia; el acento vive en los CTA */
     section.block.support .support-actions {
       display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem;
     }
@@ -232,18 +269,27 @@
 
     footer { padding: 2rem 0 2.75rem; color: var(--muted); font-size: 0.88rem; }
     footer .links { display: flex; flex-wrap: wrap; gap: 0.75rem 1.1rem; margin-bottom: 0.65rem; }
-    footer a { color: var(--ink-soft); text-decoration: none; font-weight: 500; }
+    footer a {
+      color: var(--ink-soft); text-decoration: none; font-weight: 500;
+      min-height: 44px; display: inline-flex; align-items: center;
+    }
     footer a:hover { text-decoration: underline; }
 
     @media (prefers-reduced-motion: reduce) {
-      .reveal { animation: none; opacity: 1; transform: none; }
+      html { scroll-behavior: auto; }
+      .reveal {
+        opacity: 1; transform: none; transition: none;
+      }
       .app-card, .cta { transition: none; }
+      .app-card:hover, .cta:hover { transform: none; }
     }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#apps">Saltar al catálogo de apps</a>
+
   <header class="hero wrap">
-    <div class="brand-row reveal">
+    <div class="brand-row reveal" style="--d:0ms">
       <div class="brand">
         <span class="brand-kicker">Flow Home Apps</span>
         <p class="brand-name">Cristiano · desarrollador independiente</p>
@@ -254,7 +300,7 @@
         <a href="#apoyo">Apoyar</a>
       </nav>
     </div>
-    <div class="hook reveal d2">
+    <div class="hook reveal" style="--d:120ms">
       <h1>Herramientas inteligentes para automatizar tu día a día</h1>
       <p>
         Apps Android hechas en casa: útiles, sin anuncios invasivos y con tus datos
@@ -265,15 +311,15 @@
   </header>
 
   <main class="wrap">
-    <section id="apps" class="section reveal d2">
+    <section id="apps" class="section reveal" style="--d:80ms" aria-labelledby="apps-title">
       <div class="section-head">
         <span class="section-kicker">Catálogo</span>
-        <h2>Apps</h2>
+        <h2 id="apps-title">Apps</h2>
         <p>Descargas de prueba firmadas. Misiva y MyPass, listas para instalar en Android.</p>
       </div>
 
       <div class="apps">
-        <article class="app-card">
+        <article class="app-card reveal" style="--d:140ms" aria-labelledby="misiva-title">
           <div class="app-visual misiva" aria-hidden="true">
             <div class="visual-stack">
               <img src="./assets/misiva-icon.webp" width="132" height="132" alt="" />
@@ -281,12 +327,13 @@
             </div>
           </div>
           <div class="app-body">
+            <h3 id="misiva-title" class="app-title">Misiva</h3>
             <p class="app-eyebrow">WhatsApp + Gemini</p>
             <p class="lead">
               Programa mensajes a WhatsApp y genera el texto con IA (tu propia API key de Gemini).
               Todo corre en tu móvil.
             </p>
-            <div class="badge-row">
+            <div class="badge-row" aria-label="Estado Misiva">
               <span class="badge apk">APK de prueba</span>
               <span class="badge">Android</span>
               <span class="badge">v2.0.79</span>
@@ -305,20 +352,21 @@
           </div>
         </article>
 
-        <article class="app-card mypass-card">
+        <article class="app-card mypass-card reveal" style="--d:220ms" aria-labelledby="mypass-title">
           <div class="app-visual mypass" aria-hidden="true">
             <div class="visual-stack">
-              <img src="./assets/mypass-mark.png" width="132" height="132" alt="" />
+              <img class="app-mark" src="./assets/mypass-mark.svg" width="132" height="132" alt="" />
               <p class="wordmark">MyPass</p>
             </div>
           </div>
           <div class="app-body">
+            <h3 id="mypass-title" class="app-title">MyPass</h3>
             <p class="app-eyebrow">Bóveda de contraseñas</p>
             <p class="lead">
               Bóveda cifrada en el dispositivo, Recovery Key, backup y Autofill.
               La copia en la nube es opcional y ya va cifrada.
             </p>
-            <div class="badge-row">
+            <div class="badge-row" aria-label="Estado MyPass">
               <span class="badge play">Próximamente en Google Play</span>
               <span class="badge apk">APK de prueba</span>
               <span class="badge">v1.1.3</span>
@@ -339,9 +387,9 @@
       </div>
     </section>
 
-    <section id="transparencia" class="block section reveal">
+    <section id="transparencia" class="block section reveal" style="--d:60ms" aria-labelledby="transparencia-title">
       <span class="section-kicker">Confianza</span>
-      <h2>Transparencia</h2>
+      <h2 id="transparencia-title">Transparencia</h2>
       <p>
         <strong>¿Por qué descargas directas?</strong>
         Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión.
@@ -360,18 +408,18 @@
       </p>
     </section>
 
-    <section id="apoyo" class="block support section reveal">
+    <section id="apoyo" class="block support section reveal" style="--d:100ms" aria-labelledby="apoyo-title">
       <span class="section-kicker">Apoyar</span>
-      <h2>Invítame un helado y sigue el desarrollo</h2>
+      <h2 id="apoyo-title">Invítame un helado y sigue el desarrollo</h2>
       <p>
         Las apps son gratuitas y sin anuncios. Una propina voluntaria ayuda a mejorar la IA,
         el Autofill y las próximas herramientas.
       </p>
       <div class="support-actions">
-        <a class="cta kofi" href="https://ko-fi.com/cristianodeveloper" rel="noopener" target="_blank">
+        <a class="cta kofi" href="https://ko-fi.com/cristianodeveloper" rel="noopener noreferrer" target="_blank">
           Ko-fi · Invítame un helado
         </a>
-        <a class="cta paypal" href="https://paypal.me/cristianodeveloper" rel="noopener" target="_blank">
+        <a class="cta paypal" href="https://paypal.me/cristianodeveloper" rel="noopener noreferrer" target="_blank">
           PayPal
         </a>
       </div>
@@ -383,13 +431,34 @@
       <a href="./mensajetexto.html">Privacidad Misiva</a>
       <a href="./mypass-es.html">Privacidad MyPass</a>
       <a href="mailto:soporte.flowhomeapps@gmail.com">Soporte</a>
-      <a href="https://ko-fi.com/cristianodeveloper" rel="noopener">Ko-fi</a>
+      <a href="https://ko-fi.com/cristianodeveloper" rel="noopener noreferrer">Ko-fi</a>
     </div>
     <p>© <span id="y"></span> Flow Home Apps · Hecho con calma, sin prisa de plataforma.</p>
   </footer>
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    (function () {
+      var nodes = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+      if (!("IntersectionObserver" in window)) {
+        nodes.forEach(function (el) { el.classList.add("is-in"); });
+        return;
+      }
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      if (reduce) {
+        nodes.forEach(function (el) { el.classList.add("is-in"); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+      nodes.forEach(function (el) { io.observe(el); });
+    })();
   </script>
 </body>
 </html>

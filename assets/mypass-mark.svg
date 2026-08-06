@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="MyPass">
+  <defs>
+    <linearGradient id="bg" x1="128" y1="40" x2="384" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2b8fd0"/>
+      <stop offset="55%" stop-color="#156089"/>
+      <stop offset="100%" stop-color="#0a2d4a"/>
+    </linearGradient>
+    <linearGradient id="pFill" x1="260" y1="120" x2="400" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9fd8ff"/>
+      <stop offset="100%" stop-color="#4aa8e8"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#001828" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <g filter="url(#soft)">
+    <!-- M -->
+    <path fill="#ffffff" d="M96 148h58l46 128 46-128h58v220h-52V248l-40 108h-24L148 248v120H96V148z"/>
+    <!-- P -->
+    <path fill="url(#pFill)" d="M318 148h86c58 0 96 32 96 88 0 48-28 80-74 88l58 72h-62l-54-70h-18v70h-54V148zm54 48v68h28c28 0 44-14 44-34s-16-34-44-34h-28z"/>
+    <!-- Keyhole -->
+    <circle cx="384" cy="214" r="16" fill="#0a2d4a"/>
+    <path fill="#0a2d4a" d="M376 220h16l6 28h-28l6-28z"/>
+  </g>
+</svg>
