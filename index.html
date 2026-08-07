@@ -1,0 +1,686 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-deploy-stamp="2026-08-07">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Flow Home Apps — Herramientas para tu día a día</title>
+  <meta name="description" content="Misiva y MyPass: apps Android locales de Flow Home Apps. Descarga de prueba mientras llegan a Google Play." />
+  <meta name="theme-color" content="#0c1f33" />
+  <link rel="canonical" href="https://cristianoqa.github.io/policies/" />
+  <link rel="icon" href="./assets/flow-home-mark.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="./assets/flow-home-mark.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="./assets/flow-home-mark.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cristianoqa.github.io/policies/" />
+  <meta property="og:title" content="Flow Home Apps — Misiva + MyPass" />
+  <meta property="og:description" content="Apps Android locales. APKs de prueba firmados mientras llegan a Google Play." />
+  <meta property="og:image" content="https://cristianoqa.github.io/policies/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Flow Home Apps — Misiva + MyPass" />
+  <meta name="twitter:description" content="Apps Android locales. APKs de prueba firmados mientras llegan a Google Play." />
+  <meta name="twitter:image" content="https://cristianoqa.github.io/policies/assets/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #0c1f33;
+      --ink-soft: #2a4058;
+      --muted: #5a6f86;
+      --paper: #f3f6f4;
+      --card: #ffffff;
+      --line: #d5e0e8;
+      --accent: #0f6b5c;
+      --accent-2: #1a6b9a;
+      --misiva: #0e7a6b;
+      --mypass: #156089;
+      --radius: 18px;
+      --shadow: 0 18px 40px rgba(12, 31, 51, 0.08);
+      --focus: #1a6b9a;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Outfit, system-ui, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 420px at 8% -5%, #d7ece6 0%, transparent 55%),
+        radial-gradient(800px 380px at 100% 0%, #d9e7f4 0%, transparent 50%),
+        linear-gradient(180deg, #eef3f0 0%, var(--paper) 38%, #e8eef3 100%);
+      line-height: 1.55;
+    }
+    a { color: var(--accent-2); }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(980px, calc(100% - 2rem)); margin: 0 auto; }
+
+    .skip-link {
+      position: absolute; left: 1rem; top: -100px; z-index: 100;
+      background: var(--ink); color: #fff; padding: 0.65rem 1rem;
+      border-radius: 10px; font-weight: 700; text-decoration: none;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    :focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+    .cta:focus-visible, .nav-links a:focus-visible, .lang-switch button:focus-visible {
+      outline-offset: 2px;
+    }
+
+    .hero { padding: 2.5rem 0 1.25rem; }
+    .brand-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .brand-logo {
+      width: 84px; height: 84px; object-fit: contain; flex-shrink: 0;
+    }
+    @media (max-width: 480px) {
+      .brand-logo { width: 72px; height: 72px; }
+    }
+    .brand-kicker {
+      font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); font-weight: 600;
+    }
+    .brand-name {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.35rem, 3.2vw, 1.75rem);
+      font-weight: 700; letter-spacing: -0.02em; margin: 0.15rem 0 0; color: var(--ink);
+    }
+    .header-actions {
+      display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;
+    }
+    .lang-switch {
+      display: inline-flex; border: 1px solid var(--line); border-radius: 999px;
+      overflow: hidden; background: rgba(255,255,255,0.85);
+    }
+    .lang-switch button {
+      appearance: none; border: 0; background: transparent;
+      font: inherit; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.04em;
+      color: var(--ink-soft); padding: 0.55rem 0.7rem; min-height: 44px; cursor: pointer;
+    }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--ink); color: #fff;
+    }
+    .lang-switch button:hover:not([aria-pressed="true"]) { background: #f3f7fa; color: var(--ink); }
+    .nav-links { display: flex; gap: 0.55rem; flex-wrap: wrap; }
+    .nav-links a {
+      text-decoration: none; color: var(--ink-soft); font-weight: 600;
+      font-size: 0.95rem;
+      min-height: 44px; min-width: 44px;
+      padding: 0.65rem 1rem; border-radius: 999px;
+      border: 1px solid var(--line); background: rgba(255,255,255,0.75);
+      display: inline-flex; align-items: center; justify-content: center;
+    }
+    .nav-links a:hover { border-color: var(--ink-soft); color: var(--ink); }
+
+    .hook {
+      width: 100%;
+      text-align: center;
+      padding: 1.75rem 1.25rem 1.5rem;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hook h1 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.75rem, 4.8vw, 2.55rem);
+      line-height: 1.15; letter-spacing: -0.03em;
+      margin: 0 auto 0.9rem; font-weight: 700;
+      max-width: 22ch;
+    }
+    .hook p {
+      margin: 0 auto;
+      color: var(--ink-soft);
+      font-size: clamp(1rem, 2.4vw, 1.12rem);
+      max-width: 42rem;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+      transition-delay: var(--d, 0ms);
+    }
+    .reveal.is-in { opacity: 1; transform: none; }
+
+    .section { margin: 2.5rem 0 0; }
+    .section-head { margin: 0 0 1.1rem; }
+    .section-kicker {
+      display: inline-block;
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--accent);
+      margin: 0 0 0.35rem;
+    }
+    .section-head h2 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(1.45rem, 3vw, 1.75rem);
+      margin: 0; letter-spacing: -0.02em;
+    }
+    .section-head p {
+      margin: 0.4rem 0 0;
+      color: var(--ink-soft);
+      max-width: 40rem;
+    }
+
+    .apps { display: grid; gap: 1.35rem; }
+    @media (min-width: 820px) { .apps { grid-template-columns: 1fr 1fr; } }
+
+    .app-card {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .app-card:hover { transform: translateY(-3px); box-shadow: 0 22px 48px rgba(12, 31, 51, 0.11); }
+    .app-visual {
+      aspect-ratio: 16 / 10; display: grid; place-items: center;
+      position: relative; overflow: hidden;
+    }
+    .app-visual.misiva { background: linear-gradient(145deg, #0f6b5c 0%, #0c4f45 55%, #163a4a 100%); }
+    .app-visual.mypass { background: linear-gradient(145deg, #1a6b9a 0%, #124868 55%, #0c1f33 100%); }
+    .app-visual::after {
+      content: ""; position: absolute; inset: auto -20% -40% 20%; height: 70%;
+      background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 65%);
+      pointer-events: none;
+    }
+    .visual-stack {
+      display: flex; flex-direction: column; align-items: center; gap: 0.65rem;
+      position: relative; z-index: 1;
+    }
+    .app-visual img, .app-visual .app-mark {
+      width: 112px; height: 112px; object-fit: contain;
+      border-radius: 26px;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.28);
+      background: transparent; padding: 0; border: none; outline: none;
+    }
+    .app-visual.mypass .app-mark {
+      border-radius: 0; box-shadow: none;
+      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.28));
+    }
+    @media (max-width: 480px) {
+      .app-visual img, .app-visual .app-mark {
+        width: 96px; height: 96px; border-radius: 22px;
+      }
+      .app-visual.mypass .app-mark { border-radius: 0; }
+    }
+    .app-visual .wordmark {
+      font-family: Fraunces, Georgia, serif; color: #fff; font-size: 1.55rem;
+      font-weight: 700; letter-spacing: -0.02em; margin: 0;
+    }
+
+    .app-body {
+      padding: 1.25rem 1.25rem 1.4rem; display: flex; flex-direction: column;
+      gap: 0.75rem; flex: 1;
+    }
+    .app-title {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    .app-eyebrow {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--muted); margin: 0;
+    }
+    .app-body .lead { margin: 0; color: var(--ink-soft); font-size: 0.98rem; }
+    .benefits { margin: 0.15rem 0 0; padding: 0; list-style: none; display: grid; gap: 0.4rem; }
+    .benefits li { position: relative; padding-left: 1.15rem; color: var(--ink); font-size: 0.95rem; }
+    .benefits li::before {
+      content: ""; position: absolute; left: 0; top: 0.55em;
+      width: 0.45rem; height: 0.45rem; border-radius: 50%; background: var(--accent);
+    }
+    .app-card.mypass-card .benefits li::before { background: var(--mypass); }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .badge {
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+      padding: 0.28rem 0.55rem; border-radius: 999px; border: 1px solid var(--line);
+      color: var(--ink-soft); background: #f7faf8;
+    }
+    .badge.play { border-color: #b7d4ea; color: #124868; background: #eaf4fb; }
+    .badge.apk { border-color: #b9ddd4; color: #0f6b5c; background: #eaf6f2; }
+
+    .cta-stack { display: grid; gap: 0.55rem; margin-top: auto; padding-top: 0.35rem; }
+    .cta {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem;
+      text-decoration: none; font-weight: 700; font-size: 0.98rem;
+      min-height: 48px;
+      padding: 0.88rem 1.05rem; border-radius: 12px; color: #fff; background: var(--misiva);
+      transition: filter 0.2s ease, transform 0.2s ease;
+    }
+    .cta:hover { filter: brightness(1.07); transform: translateY(-1px); }
+    .cta:active { transform: translateY(0); }
+    .cta.mypass { background: var(--mypass); }
+    .cta.secondary {
+      background: #fff; color: var(--ink); border: 1px solid var(--line);
+      font-weight: 600;
+    }
+    .cta.secondary:hover { background: #f5f8fa; filter: none; }
+    .cta-note { margin: 0; font-size: 0.8rem; color: var(--muted); }
+
+    section.block {
+      margin: 2.5rem 0 0; padding: 1.5rem 1.35rem;
+      background: rgba(255,255,255,0.78); border: 1px solid var(--line); border-radius: var(--radius);
+    }
+    section.block .section-kicker { display: block; }
+    section.block h2 {
+      font-family: Fraunces, Georgia, serif; font-size: 1.45rem; margin: 0.2rem 0 0.75rem; letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+    section.block p { margin: 0; color: var(--ink-soft); }
+    section.block p + p { margin-top: 0.65rem; }
+
+    section.block.support .support-actions {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem;
+    }
+    section.block.support .cta.kofi {
+      background: var(--mypass); color: #fff; min-width: min(100%, 240px);
+    }
+    section.block.support .cta.paypal {
+      background: #fff; color: var(--ink); border: 1px solid var(--line); font-weight: 600;
+    }
+
+    footer { padding: 2rem 0 2.75rem; color: var(--muted); font-size: 0.88rem; }
+    footer .links { display: flex; flex-wrap: wrap; gap: 0.75rem 1.1rem; margin-bottom: 0.65rem; }
+    footer a {
+      color: var(--ink-soft); text-decoration: none; font-weight: 500;
+      min-height: 44px; display: inline-flex; align-items: center;
+    }
+    footer a:hover { text-decoration: underline; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .app-card, .cta { transition: none; }
+      .app-card:hover, .cta:hover { transform: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#apps" data-i18n="skip">Saltar al catálogo de apps</a>
+
+  <header class="hero wrap">
+    <div class="brand-row reveal" style="--d:0ms">
+      <div class="brand">
+        <img class="brand-logo" src="./assets/flow-home-mark.png" width="84" height="84" alt="Flow Home Apps" />
+        <div>
+          <span class="brand-kicker">Flow Home Apps</span>
+          <p class="brand-name" data-i18n="brandName">Cristiano · desarrollador independiente</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="es" aria-pressed="true">ES</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button type="button" data-lang="pt" aria-pressed="false">PT-BR</button>
+        </div>
+        <nav class="nav-links" aria-label="Sections" data-i18n-aria="navSections">
+          <a href="#apps" data-i18n="navApps">Apps</a>
+          <a href="#transparencia" data-i18n="navTrust">Transparencia</a>
+          <a href="#apoyo" data-i18n="navSupport">Apoyar</a>
+        </nav>
+      </div>
+    </div>
+    <div class="hook reveal" style="--d:120ms">
+      <h1 data-i18n="heroTitle">Herramientas inteligentes para automatizar tu día a día</h1>
+      <p data-i18n="heroBody">
+        Apps Android hechas en casa: útiles, sin anuncios invasivos y con tus datos
+        donde deben estar — en tu dispositivo. Mientras Google Play termina de abrir
+        la puerta, puedes probarlas aquí.
+      </p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="apps" class="section reveal" style="--d:80ms" aria-labelledby="apps-title">
+      <div class="section-head">
+        <span class="section-kicker" data-i18n="catalogKicker">Catálogo</span>
+        <h2 id="apps-title" data-i18n="appsTitle">Apps</h2>
+        <p data-i18n="appsIntro">Descargas de prueba firmadas. Misiva y MyPass, listas para instalar en Android.</p>
+      </div>
+
+      <div class="apps">
+        <article class="app-card reveal" style="--d:140ms" aria-labelledby="misiva-title">
+          <div class="app-visual misiva" aria-hidden="true">
+            <div class="visual-stack">
+              <img src="./assets/misiva-icon.webp" width="112" height="112" alt="" />
+              <p class="wordmark">Misiva</p>
+            </div>
+          </div>
+          <div class="app-body">
+            <h3 id="misiva-title" class="app-title">Misiva</h3>
+            <p class="app-eyebrow">WhatsApp + Gemini</p>
+            <p class="lead" data-i18n="misivaLead">
+              Programa mensajes a WhatsApp y genera el texto con IA (tu propia API key de Gemini).
+              Todo corre en tu móvil.
+            </p>
+            <div class="badge-row" data-i18n-aria="misivaStatus">
+              <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
+              <span class="badge">Android</span>
+              <span class="badge">v2.0.79</span>
+            </div>
+            <ul class="benefits">
+              <li data-i18n="misivaB1">Programaciones diarias y recurrentes</li>
+              <li data-i18n="misivaB2">Respuestas asistidas con Gemini</li>
+              <li data-i18n="misivaB3">Envío automatizado en el dispositivo</li>
+              <li data-i18n="misivaB4">Sin subir tus mensajes a nuestros servidores</li>
+            </ul>
+            <div class="cta-stack">
+              <a class="cta" href="./descargar-misiva.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
+              <a class="cta secondary" id="privacy-misiva" href="./mensajetexto.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
+              <p class="cta-note" data-i18n="misivaNote">En el móvil: si se abre otra página, pulsa otra vez “Descargar”.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card mypass-card reveal" style="--d:220ms" aria-labelledby="mypass-title">
+          <div class="app-visual mypass" aria-hidden="true">
+            <div class="visual-stack">
+              <img class="app-mark" src="./assets/mypass-icon.svg?v=mp4" width="112" height="112" alt="" decoding="async" />
+              <p class="wordmark">MyPass</p>
+            </div>
+          </div>
+          <div class="app-body">
+            <h3 id="mypass-title" class="app-title">MyPass</h3>
+            <p class="app-eyebrow" data-i18n="mypassEyebrow">Bóveda de contraseñas</p>
+            <p class="lead" data-i18n="mypassLead">
+              Bóveda cifrada en el dispositivo, Recovery Key, backup y Autofill.
+              La copia en la nube es opcional y ya va cifrada.
+            </p>
+            <div class="badge-row" data-i18n-aria="mypassStatus">
+              <span class="badge play" data-i18n="badgePlay">Próximamente en Google Play</span>
+              <span class="badge apk" data-i18n="badgeApk">APK de prueba</span>
+              <span class="badge">v1.1.4</span>
+            </div>
+            <ul class="benefits">
+              <li data-i18n="mypassB1">Contraseña maestra solo en tu móvil</li>
+              <li data-i18n="mypassB2">Recovery Key + backup cifrado</li>
+              <li data-i18n="mypassB3">Autofill Android y TOTP</li>
+              <li data-i18n="mypassB4">Sync Premium opcional (ciphertext)</li>
+            </ul>
+            <div class="cta-stack">
+              <a class="cta mypass" href="./descargar-mypass.html" data-i18n="ctaDownload">Descargar versión de pruebas (.APK)</a>
+              <a class="cta secondary" id="privacy-mypass" href="./mypass-es.html" target="_blank" rel="noopener noreferrer" data-i18n="ctaPrivacy">Ver política de privacidad</a>
+              <p class="cta-note" data-i18n="mypassNote">También llegará a Google Play. Activa orígenes desconocidos solo para esta app.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="transparencia" class="block section reveal" style="--d:60ms" aria-labelledby="transparencia-title">
+      <span class="section-kicker" data-i18n="trustKicker">Confianza</span>
+      <h2 id="transparencia-title" data-i18n="trustTitle">Transparencia</h2>
+      <p data-i18n-html="trustP1"><strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.</p>
+      <p data-i18n-html="trustP2"><strong>Misiva</strong> aún no la anuncio en Play (últimos pasos). <strong>MyPass</strong> sí: la subiré a Google Play; aquí tienes la versión de prueba.</p>
+      <p data-i18n-html="trustP3">Sin tienda falsa ni publicidad oculta. Contacto: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>.</p>
+      <p style="margin-top:0.85rem;font-size:0.92rem;" data-i18n="trustP4">
+        Las políticas de privacidad de cada app están en el botón de cada tarjeta (y en el pie de página).
+      </p>
+    </section>
+
+    <section id="apoyo" class="block support section reveal" style="--d:100ms" aria-labelledby="apoyo-title">
+      <span class="section-kicker" data-i18n="supportKicker">Apoyar</span>
+      <h2 id="apoyo-title" data-i18n="supportTitle">Invítame un helado y sigue el desarrollo</h2>
+      <p data-i18n="supportBody">
+        Las apps son gratuitas y sin anuncios. Una propina voluntaria ayuda a mejorar la IA,
+        el Autofill y las próximas herramientas.
+      </p>
+      <div class="support-actions">
+        <a class="cta kofi" href="https://ko-fi.com/cristianodeveloper" rel="noopener noreferrer" target="_blank" data-i18n="ctaKofi">
+          Ko-fi · Invítame un helado
+        </a>
+        <a class="cta paypal" href="https://paypal.me/cristianodeveloper" rel="noopener noreferrer" target="_blank">
+          PayPal
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <div class="links">
+      <a id="footer-privacy-misiva" href="./mensajetexto.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMisiva">Privacidad Misiva</a>
+      <a id="footer-privacy-mypass" href="./mypass-es.html" target="_blank" rel="noopener noreferrer" data-i18n="footerMypass">Privacidad MyPass</a>
+      <a href="mailto:soporte.flowhomeapps@gmail.com" data-i18n="footerSupport">Soporte</a>
+      <a href="https://ko-fi.com/cristianodeveloper" rel="noopener noreferrer" target="_blank">Ko-fi</a>
+    </div>
+    <p data-i18n-html="footerCopy">© <span id="y"></span> Flow Home Apps · Hecho con calma, sin prisa de plataforma.</p>
+  </footer>
+
+  <script>
+    document.getElementById("y") && (document.getElementById("y").textContent = new Date().getFullYear());
+
+    (function () {
+      var year = new Date().getFullYear();
+      var privacy = {
+        es: { misiva: "./mensajetexto.html", mypass: "./mypass-es.html" },
+        en: { misiva: "./misiva.html", mypass: "./mypass.html" },
+        pt: { misiva: "./misiva-pt.html", mypass: "./mypass-pt.html" }
+      };
+      var I18N = {
+        es: {
+          skip: "Saltar al catálogo de apps",
+          brandName: "Cristiano · desarrollador independiente",
+          navSections: "Secciones",
+          navApps: "Apps",
+          navTrust: "Transparencia",
+          navSupport: "Apoyar",
+          heroTitle: "Herramientas inteligentes para automatizar tu día a día",
+          heroBody: "Apps Android hechas en casa: útiles, sin anuncios invasivos y con tus datos donde deben estar — en tu dispositivo. Mientras Google Play termina de abrir la puerta, puedes probarlas aquí.",
+          catalogKicker: "Catálogo",
+          appsTitle: "Apps",
+          appsIntro: "Descargas de prueba firmadas. Misiva y MyPass, listas para instalar en Android.",
+          misivaLead: "Programa mensajes a WhatsApp y genera el texto con IA (tu propia API key de Gemini). Todo corre en tu móvil.",
+          misivaStatus: "Estado Misiva",
+          badgeApk: "APK de prueba",
+          misivaB1: "Programaciones diarias y recurrentes",
+          misivaB2: "Respuestas asistidas con Gemini",
+          misivaB3: "Envío automatizado en el dispositivo",
+          misivaB4: "Sin subir tus mensajes a nuestros servidores",
+          ctaDownload: "Descargar versión de pruebas (.APK)",
+          ctaPrivacy: "Ver política de privacidad",
+          misivaNote: "En el móvil: si se abre otra página, pulsa otra vez “Descargar”.",
+          mypassEyebrow: "Bóveda de contraseñas",
+          mypassLead: "Bóveda cifrada en el dispositivo, Recovery Key, backup y Autofill. La copia en la nube es opcional y ya va cifrada.",
+          mypassStatus: "Estado MyPass",
+          badgePlay: "Próximamente en Google Play",
+          mypassB1: "Contraseña maestra solo en tu móvil",
+          mypassB2: "Recovery Key + backup cifrado",
+          mypassB3: "Autofill Android y TOTP",
+          mypassB4: "Sync Premium opcional (ciphertext)",
+          mypassNote: "También llegará a Google Play. Activa orígenes desconocidos solo para esta app.",
+          trustKicker: "Confianza",
+          trustTitle: "Transparencia",
+          trustP1: "<strong>¿Por qué descargas directas?</strong> Soy un desarrollador independiente. Publicar en Google Play lleva tiempo de revisión. Mientras tanto ofrezco APKs firmados desde esta página, sin intermediarios.",
+          trustP2: "<strong>Misiva</strong> aún no la anuncio en Play (últimos pasos). <strong>MyPass</strong> sí: la subiré a Google Play; aquí tienes la versión de prueba.",
+          trustP3: "Sin tienda falsa ni publicidad oculta. Contacto: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
+          trustP4: "Las políticas de privacidad de cada app están en el botón de cada tarjeta (y en el pie de página).",
+          supportKicker: "Apoyar",
+          supportTitle: "Invítame un helado y sigue el desarrollo",
+          supportBody: "Las apps son gratuitas y sin anuncios. Una propina voluntaria ayuda a mejorar la IA, el Autofill y las próximas herramientas.",
+          ctaKofi: "Ko-fi · Invítame un helado",
+          footerMisiva: "Privacidad Misiva",
+          footerMypass: "Privacidad MyPass",
+          footerSupport: "Soporte",
+          footerCopy: "© " + year + " Flow Home Apps · Hecho con calma, sin prisa de plataforma."
+        },
+        en: {
+          skip: "Skip to app catalog",
+          brandName: "Cristiano · indie developer",
+          navSections: "Sections",
+          navApps: "Apps",
+          navTrust: "Transparency",
+          navSupport: "Support",
+          heroTitle: "Smart tools to automate your day",
+          heroBody: "Homemade Android apps: useful, no invasive ads, and your data stays on your device. While Google Play finishes opening the door, you can try them here.",
+          catalogKicker: "Catalog",
+          appsTitle: "Apps",
+          appsIntro: "Signed test downloads. Misiva and MyPass, ready to install on Android.",
+          misivaLead: "Schedule WhatsApp messages and generate text with AI (your own Gemini API key). Everything runs on your phone.",
+          misivaStatus: "Misiva status",
+          badgeApk: "Test APK",
+          misivaB1: "Daily and recurring schedules",
+          misivaB2: "Gemini-assisted replies",
+          misivaB3: "Automated sending on-device",
+          misivaB4: "We don’t upload your messages to our servers",
+          ctaDownload: "Download test build (.APK)",
+          ctaPrivacy: "View privacy policy",
+          misivaNote: "On mobile: if another page opens, tap “Download” again.",
+          mypassEyebrow: "Password vault",
+          mypassLead: "On-device encrypted vault, Recovery Key, backup and Autofill. Cloud copy is optional and already encrypted.",
+          mypassStatus: "MyPass status",
+          badgePlay: "Coming soon to Google Play",
+          mypassB1: "Master password stays on your phone",
+          mypassB2: "Recovery Key + encrypted backup",
+          mypassB3: "Android Autofill and TOTP",
+          mypassB4: "Optional Premium sync (ciphertext)",
+          mypassNote: "Also coming to Google Play. Enable unknown sources only for this app.",
+          trustKicker: "Trust",
+          trustTitle: "Transparency",
+          trustP1: "<strong>Why direct downloads?</strong> I’m an indie developer. Publishing on Google Play takes review time. Meanwhile I offer signed APKs from this page, no middlemen.",
+          trustP2: "<strong>Misiva</strong> is not announced on Play yet (final steps). <strong>MyPass</strong> will go to Google Play; here is the test build.",
+          trustP3: "No fake store, no hidden ads. Contact: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
+          trustP4: "Each app’s privacy policy is on the card button (and in the footer).",
+          supportKicker: "Support",
+          supportTitle: "Buy me an ice cream and keep development going",
+          supportBody: "The apps are free and ad-free. A voluntary tip helps improve AI, Autofill and upcoming tools.",
+          ctaKofi: "Ko-fi · Buy me an ice cream",
+          footerMisiva: "Misiva privacy",
+          footerMypass: "MyPass privacy",
+          footerSupport: "Support",
+          footerCopy: "© " + year + " Flow Home Apps · Built calmly, without platform rush."
+        },
+        pt: {
+          skip: "Ir para o catálogo de apps",
+          brandName: "Cristiano · desenvolvedor independente",
+          navSections: "Seções",
+          navApps: "Apps",
+          navTrust: "Transparência",
+          navSupport: "Apoiar",
+          heroTitle: "Ferramentas inteligentes para automatizar o seu dia a dia",
+          heroBody: "Apps Android feitos em casa: úteis, sem anúncios invasivos e com os seus dados no dispositivo. Enquanto a Google Play termina de abrir a porta, você pode testá-los aqui.",
+          catalogKicker: "Catálogo",
+          appsTitle: "Apps",
+          appsIntro: "Downloads de teste assinados. Misiva e MyPass, prontos para instalar no Android.",
+          misivaLead: "Agende mensagens no WhatsApp e gere texto com IA (sua própria API key do Gemini). Tudo roda no seu celular.",
+          misivaStatus: "Status Misiva",
+          badgeApk: "APK de teste",
+          misivaB1: "Agendamentos diários e recorrentes",
+          misivaB2: "Respostas assistidas com Gemini",
+          misivaB3: "Envio automatizado no dispositivo",
+          misivaB4: "Não enviamos suas mensagens aos nossos servidores",
+          ctaDownload: "Baixar versão de testes (.APK)",
+          ctaPrivacy: "Ver política de privacidade",
+          misivaNote: "No celular: se abrir outra página, toque em “Baixar” de novo.",
+          mypassEyebrow: "Cofre de senhas",
+          mypassLead: "Cofre criptografado no dispositivo, Recovery Key, backup e Autofill. A cópia na nuvem é opcional e já vai criptografada.",
+          mypassStatus: "Status MyPass",
+          badgePlay: "Em breve na Google Play",
+          mypassB1: "Senha mestra só no seu celular",
+          mypassB2: "Recovery Key + backup criptografado",
+          mypassB3: "Autofill Android e TOTP",
+          mypassB4: "Sync Premium opcional (ciphertext)",
+          mypassNote: "Também chegará à Google Play. Ative origens desconhecidas só para este app.",
+          trustKicker: "Confiança",
+          trustTitle: "Transparência",
+          trustP1: "<strong>Por que downloads diretos?</strong> Sou um desenvolvedor independente. Publicar na Google Play leva tempo de revisão. Enquanto isso ofereço APKs assinados nesta página, sem intermediários.",
+          trustP2: "<strong>Misiva</strong> ainda não anuncio na Play (últimos passos). <strong>MyPass</strong> sim: vou subir na Google Play; aqui está a versão de teste.",
+          trustP3: "Sem loja falsa nem publicidade oculta. Contato: <a href=\"mailto:soporte.flowhomeapps@gmail.com\">soporte.flowhomeapps@gmail.com</a>.",
+          trustP4: "As políticas de privacidade de cada app estão no botão de cada cartão (e no rodapé).",
+          supportKicker: "Apoiar",
+          supportTitle: "Me pague um sorvete e continue o desenvolvimento",
+          supportBody: "Os apps são gratuitos e sem anúncios. Uma gorjeta voluntária ajuda a melhorar a IA, o Autofill e as próximas ferramentas.",
+          ctaKofi: "Ko-fi · Me pague um sorvete",
+          footerMisiva: "Privacidade Misiva",
+          footerMypass: "Privacidade MyPass",
+          footerSupport: "Suporte",
+          footerCopy: "© " + year + " Flow Home Apps · Feito com calma, sem pressa de plataforma."
+        }
+      };
+
+      function detectLang() {
+        var q = new URLSearchParams(location.search).get("lang");
+        if (q && I18N[q]) return q;
+        var saved = localStorage.getItem("fha_lang");
+        if (saved && I18N[saved]) return saved;
+        var nav = (navigator.language || "es").toLowerCase();
+        if (nav.indexOf("pt") === 0) return "pt";
+        if (nav.indexOf("en") === 0) return "en";
+        return "es";
+      }
+
+      function applyLang(lang) {
+        var t = I18N[lang] || I18N.es;
+        document.documentElement.lang = lang === "pt" ? "pt-BR" : lang;
+        document.title = "Flow Home Apps — " + t.heroTitle;
+        var desc = document.querySelector('meta[name="description"]');
+        if (desc) desc.setAttribute("content", t.heroBody);
+
+        document.querySelectorAll("[data-i18n]").forEach(function (el) {
+          var key = el.getAttribute("data-i18n");
+          if (t[key] != null) el.textContent = t[key];
+        });
+        document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+          var key = el.getAttribute("data-i18n-html");
+          if (t[key] != null) el.innerHTML = t[key];
+        });
+        document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+          var key = el.getAttribute("data-i18n-aria");
+          if (t[key] != null) el.setAttribute("aria-label", t[key]);
+        });
+
+        var p = privacy[lang] || privacy.es;
+        var misiva = document.getElementById("privacy-misiva");
+        var mypass = document.getElementById("privacy-mypass");
+        var fMisiva = document.getElementById("footer-privacy-misiva");
+        var fMypass = document.getElementById("footer-privacy-mypass");
+        if (misiva) misiva.href = p.misiva;
+        if (mypass) mypass.href = p.mypass;
+        if (fMisiva) fMisiva.href = p.misiva;
+        if (fMypass) fMypass.href = p.mypass;
+
+        document.querySelectorAll(".lang-switch button").forEach(function (btn) {
+          btn.setAttribute("aria-pressed", btn.getAttribute("data-lang") === lang ? "true" : "false");
+        });
+        localStorage.setItem("fha_lang", lang);
+        var url = new URL(location.href);
+        url.searchParams.set("lang", lang);
+        history.replaceState(null, "", url);
+      }
+
+      var lang = detectLang();
+      applyLang(lang);
+      document.querySelectorAll(".lang-switch button").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          applyLang(btn.getAttribute("data-lang"));
+        });
+      });
+    })();
+
+    (function () {
+      var nodes = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+      if (!("IntersectionObserver" in window)) {
+        nodes.forEach(function (el) { el.classList.add("is-in"); });
+        return;
+      }
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        nodes.forEach(function (el) { el.classList.add("is-in"); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-in");
+          io.unobserve(entry.target);
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+      nodes.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
