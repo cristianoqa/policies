@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="256" y1="40" x2="256" y2="480" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1a5f8f"/>
+      <stop offset="100%" stop-color="#0c2f4a"/>
+    </linearGradient>
+    <linearGradient id="p" x1="300" y1="120" x2="380" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#e8f6ff"/>
+      <stop offset="100%" stop-color="#5eb4e8"/>
+    </linearGradient>
+  </defs>
+  <!-- Squircle only; no outer stroke -->
+  <rect x="0" y="0" width="512" height="512" rx="112" fill="url(#bg)"/>
+  <!-- M -->
+  <path fill="#ffffff" d="M96 150h56l50 138 50-138h56v220h-50V248l-44 112h-24L146 248v122H96V150z"/>
+  <!-- P -->
+  <path fill="url(#p)" d="M318 150h82c56 0 94 32 94 86 0 46-28 78-74 84l56 70h-58l-52-68h-16v68h-52V150zm52 48v66h26c26 0 42-14 42-33s-16-33-42-33h-26z"/>
+  <!-- Keyhole -->
+  <circle cx="382" cy="214" r="15" fill="#0c2f4a"/>
+  <path fill="#0c2f4a" d="M374 220h16l5 26h-26l5-26z"/>
+</svg>
