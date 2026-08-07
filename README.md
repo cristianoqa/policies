@@ -1,12 +1,12 @@
-﻿# Flow Home Apps
+# Políticas de privacidad (Flow Home Apps)
 
-## Sitio (cuando Pages funciona)
-https://cristianoqa.github.io/policies/
+Sitio: https://cristianoqa.github.io/policies/
 
-## Vista previa inmediata (si Pages está en cola)
-https://cdn.jsdelivr.net/gh/cristianoqa/policies@main/index.html
+- MyPass ES: mypass-es.html
+- MyPass EN: mypass.html
+- MyPass PT: mypass-pt.html
+- Misiva ES: mensajetexto.html
+- Misiva EN: misiva.html
+- Misiva PT: misiva-pt.html
 
-## Si Deploy site to Pages se queda en Queued
-1. Cancela el run amarillo.
-2. Actions → **Mirror site to gh-pages branch** → Run workflow.
-3. Settings → Pages → Source = **Deploy from a branch** → `gh-pages` / root.
+Landing de apps: https://cristianoqa.github.io/
