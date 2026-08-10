@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy policy — Monexa</title>
+  <meta name="description" content="Privacy policy for Monexa (Flow Home Apps)." />
+  <style>
+    :root { --bg:#f7f4f4; --ink:#1a0f10; --muted:#5a4548; --card:#fff; --accent:#c41e3a; --line:#e5d6d8; }
+    * { box-sizing: border-box; }
+    body {
+      margin:0;
+      font-family:"Segoe UI",system-ui,sans-serif;
+      background:
+        radial-gradient(1100px 480px at 8% -8%, #f3d4d8 0%, transparent 55%),
+        radial-gradient(900px 400px at 100% 0%, #ece7e8 0%, transparent 50%),
+        var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
+    main { max-width:720px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
+    h1 { font-size:clamp(1.6rem,4vw,2.1rem); margin:0 0 .35rem; letter-spacing:-0.02em; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    nav.langs { display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0 1.5rem; }
+    nav.langs a {
+      color:var(--accent); text-decoration:none; border:1px solid var(--line);
+      background:var(--card); border-radius:999px; padding:.35rem .85rem; font-size:.9rem;
+    }
+    nav.langs a[aria-current="page"] { background:var(--ink); color:#fff; border-color:var(--ink); }
+    article {
+      background:var(--card); border:1px solid var(--line); border-radius:14px;
+      padding:1.35rem 1.25rem 1.5rem;
+    }
+    h2 { font-size:1.15rem; margin:1.4rem 0 .45rem; }
+    h2:first-child { margin-top:0; }
+    p, li { color:var(--ink); }
+    p { margin:.45rem 0; }
+    ul { padding-left:1.2rem; }
+    hr { border:0; border-top:1px solid var(--line); margin:1.25rem 0; }
+    footer { margin-top:1.5rem; color:var(--muted); font-size:.9rem; }
+    a { color:var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Privacy policy — Monexa</h1>
+      <p class="meta"><strong>Controller:</strong> Flow Home Apps · <strong>Contact:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Last updated: 10 Aug 2026</p>
+      <nav class="langs" aria-label="Language">
+        <a href="./monexa.html" aria-current="page">English</a>
+        <a href="./monexa-es.html">Español</a>
+        <a href="./monexa-pt.html">Português</a>
+      </nav>
+    </header>
+    <article>
+      <h2>What Monexa is</h2>
+      <p>Monexa is a <strong>shared expense and income tracker</strong> (formerly GastoControl). You can log movements, categories, budgets, subscriptions and goals in a group with other people.</p>
+      <hr />
+      <h2>Data we process</h2>
+      <ul>
+        <li><strong>Account:</strong> email and authentication (Firebase Auth).</li>
+        <li><strong>App data:</strong> expenses/incomes, categories, notes, budgets, subscriptions, goals and group membership in Firestore.</li>
+        <li><strong>Optional:</strong> receipt images (OCR) and microphone (voice expenses), only if you use those features.</li>
+      </ul>
+      <h2>Where data is stored</h2>
+      <p>Account and group data are stored in <strong>Google Firebase</strong> (Flow Home Apps project). Local preferences may stay on the device (e.g. active group).</p>
+      <h2>Permissions (Android)</h2>
+      <ul>
+        <li><strong>Internet:</strong> sync with Firebase and online features.</li>
+        <li><strong>Camera / photos:</strong> scan or attach receipts (optional).</li>
+        <li><strong>Microphone:</strong> voice expense entry (optional).</li>
+      </ul>
+      <h2>Third parties</h2>
+      <p>We do not sell your data. We use providers needed to run the app (Firebase/Google). If you enable third-party OCR (e.g. OCR.space), the receipt image may be sent to that service under its policy.</p>
+      <h2>Your rights</h2>
+      <p>You may request access, correction or deletion at <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>. You can also delete data in-app or by uninstalling (local data).</p>
+      <h2>Contact</h2>
+      <p><a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a></p>
+    </article>
+    <footer>Flow Home Apps · Monexa</footer>
+  </main>
+</body>
+</html>
