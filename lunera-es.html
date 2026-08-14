@@ -4,42 +4,83 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Política de privacidad — Lunera</title>
+  <meta name="description" content="Política de privacidad de Lunera (Flow Home Apps)." />
   <style>
-    :root { --bg:#faf5ff; --ink:#1f1235; --muted:#5b5563; --card:#fff; --accent:#7c3aed; --line:#ddd6fe; }
-    body { margin:0; font-family:"Segoe UI",system-ui,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    :root { --bg:#FBF9F6; --ink:#2A2238; --muted:#8B8399; --card:#fff; --accent:#4A3F6B; --line:#E5DFEC; }
+    * { box-sizing: border-box; }
+    body {
+      margin:0;
+      font-family:"Segoe UI",system-ui,sans-serif;
+      background:
+        radial-gradient(1200px 500px at 10% -10%, #F0E8F8 0%, transparent 55%),
+        radial-gradient(900px 400px at 100% 0%, #FCEEF2 0%, transparent 50%),
+        var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
     main { max-width:720px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
-    article { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.35rem; }
-    h1 { font-size:1.8rem; } h2 { font-size:1.15rem; margin-top:1.2rem; }
-    a { color:var(--accent); } nav { margin:0.75rem 0 1.25rem; }
+    h1 { font-size:clamp(1.6rem,4vw,2.1rem); margin:0 0 .35rem; letter-spacing:-0.02em; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    nav.langs { display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0 1.5rem; }
+    nav.langs a {
+      color:var(--accent); text-decoration:none; border:1px solid var(--line);
+      background:var(--card); border-radius:999px; padding:.35rem .85rem; font-size:.9rem;
+    }
+    nav.langs a[aria-current="page"] { background:var(--ink); color:#fff; border-color:var(--ink); }
+    article {
+      background:var(--card); border:1px solid var(--line); border-radius:14px;
+      padding:1.35rem 1.25rem 1.5rem;
+    }
+    h2 { font-size:1.15rem; margin:1.4rem 0 .45rem; }
+    h2:first-child { margin-top:0; }
+    p, li { color:var(--ink); }
+    p { margin:.45rem 0; }
+    ul { padding-left:1.2rem; }
+    hr { border:0; border-top:1px solid var(--line); margin:1.25rem 0; }
+    footer { margin-top:1.5rem; color:var(--muted); font-size:.9rem; }
+    a { color:var(--accent); }
   </style>
 </head>
 <body>
   <main>
-    <h1>Política de privacidad — Lunera</h1>
-    <p><strong>Flow Home Apps</strong> · <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Última actualización: 14 ago 2026</p>
-    <nav>
-      <a href="./lunera.html">English</a> ·
-      <a href="./lunera-es.html">Español</a> ·
-      <a href="./lunera-pt.html">Português</a> ·
-      <a href="./lunera-terms-es.html">Términos</a>
-    </nav>
+    <header>
+      <h1>Política de privacidad — Lunera</h1>
+      <p class="meta"><strong>Responsable:</strong> Flow Home Apps · <strong>Contacto:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Última actualización: 14 ago 2026</p>
+      <nav class="langs" aria-label="Idioma">
+        <a href="./lunera.html">English</a>
+        <a href="./lunera-es.html" aria-current="page">Español</a>
+        <a href="./lunera-pt.html">Português</a>
+        <a href="./lunera-terms-es.html">Términos</a>
+      </nav>
+    </header>
     <article>
       <h2>Qué es Lunera</h2>
-      <p>Lunera es una app de <strong>salud menstrual</strong> para Android/iOS. Registra síntomas, predice fases del ciclo y genera informes opcionales.</p>
-      <h2>Datos que tratamos</h2>
+      <p>Lunera es una app <strong>FemTech de salud menstrual</strong>. Predice fases del ciclo, permite registro diario de síntomas, calendario flexible, enciclopedia educativa y asistencia IA local. Los datos de salud se tratan con enfoque <strong>local-first</strong>.</p>
+      <hr />
+      <h2>Datos en el dispositivo</h2>
       <ul>
-        <li>Registros diarios se guardan <strong>localmente en tu dispositivo</strong>.</li>
-        <li>En modo invitado no se crea cuenta ni se envían síntomas a servidores.</li>
-        <li>Si activas cuenta, el email se almacena de forma local cifrada/hasheada; los síntomas no se venden.</li>
-        <li>No usamos publicidad invasiva.</li>
+        <li>Registros diarios, ciclos, configuración y preferencias (idioma, tema, iconos).</li>
+        <li>En modo invitado no se crea cuenta en la nube.</li>
+        <li>Biometría (opcional): el sistema gestiona Face ID/huella; Lunera no guarda imágenes biométricas.</li>
+        <li>La IA educativa usa tu contexto de ciclo <strong>en el dispositivo</strong> para respuestas locales.</li>
+      </ul>
+      <h2>Si activas cuenta / sync</h2>
+      <ul>
+        <li>Email hasheado o cifrado localmente según el flujo.</li>
+        <li>Backup opcional: blob <strong>cifrado</strong> (ciphertext). No enviamos síntomas en claro.</li>
       </ul>
       <h2>Permisos</h2>
-      <p>Notificaciones (opcionales), biometría (bloqueo opcional), almacenamiento (backup/PDF).</p>
+      <ul>
+        <li>Notificaciones (recordatorios opcionales).</li>
+        <li>Biometría (bloqueo opcional).</li>
+        <li>Almacenamiento (backup / PDF).</li>
+      </ul>
       <h2>Compras</h2>
-      <p>Lunera Pro se gestiona mediante las tiendas. No usamos PayPal/Ko-fi para desbloquear funciones digitales.</p>
-      <h2>Contacto</h2>
-      <p><a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a></p>
+      <p>Lunera Pro se gestiona mediante las tiendas (Google Play / App Store). Ko-fi/PayPal son apoyo voluntario y <strong>no</strong> desbloquean funciones digitales.</p>
+      <h2>Tus derechos</h2>
+      <p>Puedes borrar datos desinstalando la app o restaurando/exportando backups. Para consultas: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>.</p>
     </article>
+    <footer>Flow Home Apps · Lunera</footer>
   </main>
 </body>
 </html>
