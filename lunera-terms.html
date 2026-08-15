@@ -4,37 +4,65 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Terms of Service — Lunera</title>
+  <meta name="description" content="Terms of service for Lunera (Flow Home Apps)." />
   <style>
-    :root { --bg:#faf5ff; --ink:#1f1235; --muted:#5b5563; --card:#fff; --accent:#7c3aed; --line:#ddd6fe; }
-    body { margin:0; font-family:"Segoe UI",system-ui,sans-serif; background:var(--bg); color:var(--ink); line-height:1.55; }
+    :root { --bg:#FBF9F6; --ink:#2A2238; --muted:#8B8399; --card:#fff; --accent:#4A3F6B; --line:#E5DFEC; }
+    * { box-sizing: border-box; }
+    body {
+      margin:0;
+      font-family:"Segoe UI",system-ui,sans-serif;
+      background:
+        radial-gradient(1200px 500px at 10% -10%, #F0E8F8 0%, transparent 55%),
+        radial-gradient(900px 400px at 100% 0%, #FCEEF2 0%, transparent 50%),
+        var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
     main { max-width:720px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
-    article { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.35rem; }
-    h1 { font-size:1.8rem; } h2 { font-size:1.15rem; margin-top:1.2rem; }
-    a { color:var(--accent); } nav { margin:0.75rem 0 1.25rem; }
+    h1 { font-size:clamp(1.6rem,4vw,2.1rem); margin:0 0 .35rem; letter-spacing:-0.02em; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    nav.langs { display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0 1.5rem; }
+    nav.langs a {
+      color:var(--accent); text-decoration:none; border:1px solid var(--line);
+      background:var(--card); border-radius:999px; padding:.35rem .85rem; font-size:.9rem;
+    }
+    nav.langs a[aria-current="page"] { background:var(--ink); color:#fff; border-color:var(--ink); }
+    article {
+      background:var(--card); border:1px solid var(--line); border-radius:14px;
+      padding:1.35rem 1.25rem 1.5rem;
+    }
+    h2 { font-size:1.15rem; margin:1.4rem 0 .45rem; }
+    h2:first-child { margin-top:0; }
+    p, li { color:var(--ink); }
+    footer { margin-top:1.5rem; color:var(--muted); font-size:.9rem; }
+    a { color:var(--accent); }
   </style>
 </head>
 <body>
   <main>
-    <h1>Terms of Service — Lunera</h1>
-    <p><strong>Flow Home Apps</strong> · <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Last updated: Aug 14, 2026</p>
-    <nav>
-      <a href="./lunera-terms.html">English</a> ·
-      <a href="./lunera-terms-es.html">Español</a> ·
-      <a href="./lunera-terms-pt.html">Português</a> ·
-      <a href="./lunera.html">Privacy</a>
-    </nav>
+    <header>
+      <h1>Terms of Service — Lunera</h1>
+      <p class="meta"><strong>Flow Home Apps</strong> · Last updated: Aug 15, 2026</p>
+      <nav class="langs" aria-label="Language">
+        <a href="./lunera-terms.html" aria-current="page">English</a>
+        <a href="./lunera-terms-es.html">Español</a>
+        <a href="./lunera-terms-pt.html">Português</a>
+        <a href="./lunera.html">Privacy</a>
+      </nav>
+    </header>
     <article>
-      <h2>App use</h2>
-      <p>Lunera is an informational menstrual tracking tool. <strong>It does not replace professional medical advice</strong>.</p>
-      <h2>Accounts</h2>
-      <p>You may use guest mode or create an account. You are responsible for keeping your password confidential.</p>
-      <h2>Purchases (Lunera Pro)</h2>
-      <p>Pro features are sold only via in-app purchase (Google Play / App Store). Subscriptions renew until cancelled in the store. After cancellation, Pro access ends and the app returns to the free plan.</p>
-      <h2>Limitation</h2>
-      <p>Flow Home Apps is not liable for decisions made solely based on app information.</p>
+      <h2>Use of the app</h2>
+      <p>Lunera is offered as a <strong>menstrual wellness and education</strong> tool. It is not a medical device and does not replace professional gynecological care.</p>
+      <h2>Educational AI</h2>
+      <p>“Lunera AI” replies are informational and based on local context. They are not a diagnosis. For emergency symptoms, seek urgent care.</p>
+      <h2>Accounts and data</h2>
+      <p>You are responsible for the information you log. Guest mode keeps data only on the device. Encrypted sync is optional.</p>
+      <h2>Purchases</h2>
+      <p>In-app purchases follow Google Play / App Store policies. Tips (Ko-fi/PayPal) are voluntary and do not unlock Pro.</p>
       <h2>Contact</h2>
       <p><a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a></p>
     </article>
+    <footer>Flow Home Apps · Lunera</footer>
   </main>
 </body>
 </html>
