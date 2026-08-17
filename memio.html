@@ -3,16 +3,83 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — Memio</title>
+  <title>Privacy policy — Memio</title>
+  <meta name="description" content="Privacy policy for Memio (Flow Home Apps)." />
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.55; }
-    a { color: #ff6b35; }
+    :root { --bg:#fff8f5; --ink:#1a120e; --muted:#5a4548; --card:#fff; --accent:#ff6b35; --line:#ffd6c2; }
+    * { box-sizing: border-box; }
+    body {
+      margin:0;
+      font-family:"Segoe UI",system-ui,sans-serif;
+      background:
+        radial-gradient(1200px 500px at 10% -10%, #ffe0d1 0%, transparent 55%),
+        radial-gradient(900px 400px at 100% 0%, #fff1e8 0%, transparent 50%),
+        var(--bg);
+      color:var(--ink);
+      line-height:1.55;
+    }
+    main { max-width:720px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
+    h1 { font-size:clamp(1.6rem,4vw,2.1rem); margin:0 0 .35rem; letter-spacing:-0.02em; }
+    .meta { color:var(--muted); font-size:.95rem; }
+    nav.langs { display:flex; flex-wrap:wrap; gap:.5rem; margin:1rem 0 1.5rem; }
+    nav.langs a {
+      color:var(--accent); text-decoration:none; border:1px solid var(--line);
+      background:var(--card); border-radius:999px; padding:.35rem .85rem; font-size:.9rem;
+    }
+    nav.langs a[aria-current="page"] { background:var(--ink); color:#fff; border-color:var(--ink); }
+    article {
+      background:var(--card); border:1px solid var(--line); border-radius:14px;
+      padding:1.35rem 1.25rem 1.5rem;
+    }
+    h2 { font-size:1.15rem; margin:1.4rem 0 .45rem; }
+    h2:first-child { margin-top:0; }
+    p, li { color:var(--ink); }
+    p { margin:.45rem 0; }
+    ul { padding-left:1.2rem; }
+    hr { border:0; border-top:1px solid var(--line); margin:1.25rem 0; }
+    footer { margin-top:1.5rem; color:var(--muted); font-size:.9rem; }
+    a { color:var(--accent); }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy — Memio</h1>
-  <p>Flow Home Apps · <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a></p>
-  <p><a href="./memio-es.html">Español</a> · <a href="./memio-pt.html">Português</a></p>
-  <p>Memio is an offline-first meme generator. No account. Images are processed on your device. Gallery permission is used to pick photos and save memes. We do not sell data or show invasive ads.</p>
+  <main>
+    <header>
+      <h1>Privacy policy — Memio</h1>
+      <p class="meta"><strong>Controller:</strong> Flow Home Apps · <strong>Contact:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Last updated: 17 Aug 2026</p>
+      <nav class="langs" aria-label="Language">
+        <a href="./memio.html" aria-current="page">English</a>
+        <a href="./memio-es.html">Español</a>
+        <a href="./memio-pt.html">Português</a>
+      </nav>
+    </header>
+    <article>
+      <h2>What Memio is</h2>
+      <p>Memio is an <strong>Android meme generator</strong>. You add text to images <strong>on the device</strong>. No account or sign-in is required.</p>
+      <hr />
+      <h2>Data that stays on the device</h2>
+      <ul>
+        <li>Photos you pick as templates and memes you create are processed <strong>locally</strong>.</li>
+        <li>A short internal list of recent memes (app storage).</li>
+        <li>If you save a meme, it may be copied to your gallery with the permission you grant.</li>
+      </ul>
+      <h2>What we do not do</h2>
+      <ul>
+        <li>We do not create a cloud account or sync your images to a Memio server.</li>
+        <li>We do not sell data or use invasive ads or third-party advertising trackers.</li>
+      </ul>
+      <h2>App permissions (Android)</h2>
+      <ul>
+        <li><strong>Photos / gallery:</strong> pick your own image and, if you ask, save the meme.</li>
+        <li><strong>Share:</strong> uses the system sheet (WhatsApp, Drive, etc.); you choose the destination.</li>
+      </ul>
+      <h2>Your rights</h2>
+      <p>You can delete memes in the app, in the gallery, or by uninstalling Memio (local app data is removed). Questions: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>.</p>
+      <h2>Changes</h2>
+      <p>We will publish updates in the app and, where required, at the policy URL listed on Google Play.</p>
+      <h2>Legal notice</h2>
+      <p>This text describes how the app works technically; it is not a substitute for personal legal advice.</p>
+    </article>
+    <footer>Flow Home Apps · Memio</footer>
+  </main>
 </body>
 </html>
