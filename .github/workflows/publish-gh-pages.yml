@@ -1,0 +1,40 @@
+name: Publish docs to gh-pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gh-pages-docs
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: main-src
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages-src
+      - name: Copy docs to gh-pages root
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cp -a main-src/docs/. gh-pages-src/
+          touch gh-pages-src/.nojekyll
+          cd gh-pages-src
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to publish"
+            exit 0
+          fi
+          git commit -m "Publish privacy pages from main docs."
+          git push origin HEAD:gh-pages
