@@ -2,11 +2,12 @@
 
 Sitio: https://cristianoqa.github.io/policies/
 
-- MyPass ES: mypass-es.html
-- MyPass EN: mypass.html
-- MyPass PT: mypass-pt.html
-- Misiva ES: mensajetexto.html
-- Misiva EN: misiva.html
-- Misiva PT: misiva-pt.html
+- MyPass: mypass-es.html / mypass.html / mypass-pt.html
+- Misiva: mensajetexto.html / misiva.html / misiva-pt.html
+- Miravista: miravista-es.html (EN/PT hermanas; screenmirror-* redirige)
+- Monexa: monexa-es.html / monexa.html / monexa-pt.html
+- Memio: memio-es.html / memio.html / memio-pt.html
+- Lunera: lunera-es.html / lunera.html / lunera-pt.html (+ términos lunera-terms-*)
 
 Landing de apps: https://cristianoqa.github.io/
+
