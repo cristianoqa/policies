@@ -4,9 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Política de privacidad — Lunera</title>
-  <meta name="description" content="Política de privacidad de Lunera (Flow Home Apps)." />
+  <meta name="description" content="Política de privacidad — Lunera (Flow Home Apps)." />
   <style>
     :root { --bg:#FBF9F6; --ink:#2A2238; --muted:#8B8399; --card:#fff; --accent:#4A3F6B; --line:#E5DFEC; }
+
     * { box-sizing: border-box; }
     body {
       margin:0;
@@ -36,41 +37,41 @@
     p, li { color:var(--ink); }
     p { margin:.45rem 0; }
     ul { padding-left:1.2rem; }
+    table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem; }
+    th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
+    th { background:rgba(0,0,0,.04); }
     hr { border:0; border-top:1px solid var(--line); margin:1.25rem 0; }
     footer { margin-top:1.5rem; color:var(--muted); font-size:.9rem; }
     a { color:var(--accent); }
+    .note { font-size:.92rem; color:var(--muted); }
+
   </style>
 </head>
 <body>
   <main>
     <header>
       <h1>Política de privacidad — Lunera</h1>
-      <p class="meta"><strong>Responsable:</strong> Flow Home Apps · <strong>Contacto:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Última actualización: 17 ago 2026</p>
-      <nav class="langs" aria-label="Idioma">
-        <a href="./lunera.html">English</a>
+      <p class="meta"><strong>Responsable:</strong> Flow Home Apps · <strong>Contacto:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Última actualización: 28 sep 2026</p>
+      <nav class="langs" aria-label="Language"><a href="./lunera.html">English</a>
         <a href="./lunera-es.html" aria-current="page">Español</a>
-        <a href="./lunera-pt.html">Português</a>
-      </nav>
+        <a href="./lunera-pt.html">Português</a></nav>
       <p class="meta"><a href="./lunera-terms-es.html">Términos de servicio</a></p>
     </header>
     <article>
+
       <h2>Qué es Lunera</h2>
-      <p>Lunera es una app <strong>FemTech de salud menstrual</strong> (Android nativa y una PWA educativa en la web). Predice fases del ciclo, permite registro diario de síntomas, calendario, etapas de vida (anticonceptivos, embarazo/postparto, menopausia), enciclopedia y asistencia IA local. Los datos de salud se tratan con enfoque <strong>local-first</strong>.</p>
+      <p>Lunera es una app <strong>FemTech de salud menstrual</strong> (Android y PWA). Predice fases del ciclo, registro de síntomas, calendario, etapas de vida, enciclopedia y asistencia IA local. Enfoque <strong>local-first</strong>.</p>
       <hr />
-      <h2>Datos en el dispositivo</h2>
+      <h2>Datos tratados</h2>
       <ul>
-        <li>Registros diarios, ciclos, configuración y preferencias (idioma, tema, iconos, etapa de vida).</li>
-        <li>En modo invitado no se crea cuenta en la nube.</li>
-        <li>Biometría (opcional): el sistema gestiona Face ID/huella; Lunera no guarda imágenes biométricas.</li>
-        <li>La IA educativa usa tu contexto <strong>en el dispositivo</strong> para respuestas locales. No diagnostica ni receta.</li>
+        <li>Registros diarios, ciclos, síntomas, configuración y preferencias (en el dispositivo).</li>
+        <li>Modo invitado: sin cuenta en la nube.</li>
+        <li>Biometría opcional: el sistema gestiona Face ID/huella; Lunera no guarda imágenes biométricas.</li>
+        <li>PWA: datos mínimos en <code>localStorage</code> del navegador (este dispositivo).</li>
+        <li>Si activas cuenta/sync: identificador de cuenta y backup <strong>cifrado</strong> (ciphertext) en el backend (p. ej. Supabase).</li>
       </ul>
-      <h2>PWA (web)</h2>
-      <p>La versión web en <a href="https://cristianoqa.github.io/lunera/">cristianoqa.github.io/lunera</a> guarda en el <strong>localStorage del navegador</strong> (este dispositivo) datos mínimos como última regla y duración de ciclo. No se envían a un servidor de Lunera. Puedes borrarlos limpiando datos del sitio.</p>
-      <h2>Si activas cuenta / sync</h2>
-      <ul>
-        <li>Email hasheado o cifrado localmente según el flujo.</li>
-        <li>Backup opcional: blob <strong>cifrado</strong> (ciphertext). No enviamos síntomas en claro.</li>
-      </ul>
+      <h2>Datos de salud (categoría especial)</h2>
+      <p>Los síntomas y el ciclo pueden constituir <strong>datos relativos a la salud</strong> (art. 9 RGPD). Solo se tratan con tu <strong>consentimiento explícito</strong> al usar esas funciones, o se quedan en el dispositivo bajo tu control. Lunera es educativa: no diagnostica ni receta.</p>
       <h2>Permisos</h2>
       <ul>
         <li>Notificaciones (recordatorios opcionales).</li>
@@ -78,13 +79,44 @@
         <li>Almacenamiento (backup / PDF).</li>
       </ul>
       <h2>Compras</h2>
-      <p>Lunera Pro se gestiona mediante las tiendas (Google Play / App Store). Ko-fi/PayPal son apoyo voluntario y <strong>no</strong> desbloquean funciones digitales.</p>
+      <p>Lunera Pro se gestiona en Google Play / App Store. Ko-fi/PayPal son apoyo voluntario y no desbloquean funciones digitales.</p>
+
+      <h2>Responsable del tratamiento</h2>
+      <p><strong>Flow Home Apps</strong> (proyecto de desarrollo de aplicaciones independientes). Contacto de privacidad: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>. Si necesitas el NIF u otros datos identificativos del responsable para ejercer derechos, solicítalos por ese correo.</p>
+
+      <h2>Base jurídica (RGPD)</h2>
+      <ul>
+        <li><strong>Ejecución del servicio / contrato</strong> (art. 6.1.b): prestarte la app que has instalado.</li>
+        <li><strong>Consentimiento</strong> (art. 6.1.a y art. 9.2.a): datos de salud/síntomas y funciones opcionales (cuenta, sync, biometría, notificaciones).</li>
+        <li><strong>Interés legítimo</strong> (art. 6.1.f): seguridad básica y respuesta a soporte, sin perjudicar tus derechos.</li>
+      </ul>
+
+      <h2>Conservación</h2>
+      <p>En el dispositivo: mientras uses la app o hasta que borres datos/desinstales. Sync/backup en nube: mientras mantengas la cuenta o solicites borrado. Backups locales: bajo tu control.</p>
+
+      <h2>Destinatarios y encargados</h2>
+      <p>Proveedores necesarios si activas sync (p. ej. Supabase) y tiendas (Google/Apple) para compras. La IA educativa local no envía tu historial a un servidor de Lunera.</p>
+      <p>No vendemos datos personales ni los cedemos para publicidad de terceros.</p>
+
+      <h2>Transferencias internacionales</h2>
+      <p>Si usas sync, el proveedor cloud puede procesar datos fuera del EEE con garantías adecuadas (cláusulas tipo / medidas del proveedor). Sin sync, el tratamiento es local.</p>
+
       <h2>Tus derechos</h2>
-      <p>Puedes borrar datos desinstalando la app, restaurando/exportando backups o, en la PWA, borrando el almacenamiento del sitio. Consultas: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>.</p>
+      <p>Puedes ejercer acceso, rectificación, borrado, oposición, limitación y, cuando aplique, portabilidad, escribiendo a <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>. Responderemos en el plazo legal.</p>
+      <p>También puedes presentar una reclamación ante la <a href="https://www.aepd.es" rel="noopener noreferrer" target="_blank">Agencia Española de Protección de Datos (AEPD)</a>.</p>
+
+      <h2>Menores</h2>
+      <p>La app no está dirigida a menores de 16 años. Si detectamos datos de un menor sin base adecuada, los eliminaremos.</p>
+
+      <h2>Seguridad</h2>
+      <p>Aplicamos medidas técnicas razonables (cifrado en tránsito cuando hay red, almacenamiento local protegido por el sistema, y cifrado de extremo a extremo cuando la función lo indica). Ningún sistema es 100&nbsp;% seguro.</p>
+
       <h2>Cambios</h2>
-      <p>Publicaremos actualizaciones en la app y, si aplica, en la URL de política de Google Play.</p>
-      <h2>Aviso legal</h2>
-      <p>Este texto describe el funcionamiento técnico; no sustituye asesoramiento jurídico ni consejo médico personalizado. Lunera es educativa y no es un método anticonceptivo.</p>
+      <p>Podemos actualizar esta política. La fecha de «Última actualización» refleja el cambio. Si el cambio es relevante, lo reflejaremos también en la ficha de la tienda cuando aplique.</p>
+
+      <h2>Aviso</h2>
+      <p class="note">Este documento describe el tratamiento real de la app y ayuda a cumplir el RGPD/LOPDGDD. No sustituye asesoramiento jurídico personalizado.</p>
+
     </article>
     <footer>Flow Home Apps · Lunera</footer>
   </main>

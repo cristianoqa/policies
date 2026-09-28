@@ -1,12 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — Miravista</title>
-  <meta name="description" content="Privacy Policy — Miravista" />
+  <title>Privacy policy — Miravista</title>
+  <meta name="description" content="Privacy policy — Miravista (Flow Home Apps)." />
   <style>
     :root { --bg:#f4f7fb; --ink:#0d2847; --muted:#4a5d73; --card:#fff; --accent:#1a6b9a; --line:#d5e0ec; }
+
     * { box-sizing: border-box; }
     body {
       margin:0;
@@ -38,48 +39,71 @@
     ul { padding-left:1.2rem; }
     table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem; }
     th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
-    th { background:#eef4f9; }
-    .back { margin-top:1.5rem; }
-    .back a { color:var(--accent); font-weight:600; }
+    th { background:rgba(0,0,0,.04); }
+    hr { border:0; border-top:1px solid var(--line); margin:1.25rem 0; }
+    footer { margin-top:1.5rem; color:var(--muted); font-size:.9rem; }
+    a { color:var(--accent); }
+    .note { font-size:.92rem; color:var(--muted); }
 
   </style>
 </head>
 <body>
   <main>
-    <h1>Privacy Policy — Miravista</h1>
-    <p class="meta">Controller: Flow Home Apps · Contact: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Last updated: 7 Aug 2026</p>
-    <nav class="langs" aria-label="Language">
-        <a href="./miravista.html" aria-current="page">English</a>
+    <header>
+      <h1>Privacy policy — Miravista</h1>
+      <p class="meta"><strong>Controller:</strong> Flow Home Apps · <strong>Contact:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Last updated: 28 Sep 2026</p>
+      <nav class="langs" aria-label="Language"><a href="./miravista.html" aria-current="page">English</a>
         <a href="./miravista-es.html">Español</a>
-        <a href="./miravista-pt.html">Português</a>
-    </nav>
+        <a href="./miravista-pt.html">Português</a></nav>
+      
+    </header>
     <article>
+
       <h2>Summary</h2>
-      <p>Miravista streams your screen (and optional app playback audio) <strong>only on your local Wi‑Fi</strong>. There is no cloud mirroring server and we do not sell personal data.</p>
-      <h2>Data we use</h2>
-      <table>
-        <tr><th>Data</th><th>Purpose</th><th>Where</th></tr>
-        <tr><td>Screen content</td><td>MJPEG stream to the TV browser</td><td>Device + LAN</td></tr>
-        <tr><td>Playback audio (optional)</td><td>PCM via AudioPlaybackCapture</td><td>With permission + MediaProjection</td></tr>
-        <tr><td>Local IP</td><td>URL and QR code</td><td>On-device only</td></tr>
-        <tr><td>Session PIN</td><td>Authenticate the local stream</td><td>Generated on-device</td></tr>
-      </table>
-      <h2>What we do not do</h2>
+      <p>Miravista mirrors your screen (and optional playback audio) <strong>on your local Wi‑Fi only</strong>. No cloud mirroring servers.</p>
+      <hr />
+      <h2>Data</h2>
       <ul>
-        <li>We do not upload capture or audio to Miravista servers.</li>
-        <li>No accounts or third-party analytics in this version.</li>
-        <li>No precise location.</li>
-        <li>No overlay over other apps.</li>
+        <li>Screen/audio stream on LAN; local IP and session PIN on device.</li>
       </ul>
-      <h2>Local network</h2>
-      <p>The embedded HTTP server listens on port <strong>8080</strong>. Anyone with the URL including the PIN can view the stream. Stop mirroring when finished. Do not share the URL outside your home network.</p>
-      <h2>DRM</h2>
-      <p>Some protected apps may not send video or audio to the mirror. That is an Android system limitation.</p>
-      <h2>Contact</h2>
-      <p><a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a></p>
+
+      <h2>Data controller</h2>
+      <p><strong>Flow Home Apps</strong> (independent app project). Privacy contact: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>. Tax ID or further controller details can be requested by email when exercising your rights.</p>
+
+      <h2>Legal bases (GDPR)</h2>
+      <ul>
+        <li><strong>Contract/service</strong> (Art. 6(1)(b)).</li>
+        <li><strong>Consent</strong> (Art. 6(1)(a)) for MediaProjection capture.</li>
+      </ul>
+
+      <h2>Retention</h2>
+      <p>Real-time stream only; no cloud storage of captures by Miravista.</p>
+
+      <h2>Recipients and processors</h2>
+      <p>Only LAN devices you share URL+PIN with.</p>
+      <p>We do not sell personal data or share it for third-party advertising.</p>
+
+      <h2>International transfers</h2>
+      <p>No international transfers in intended use (stays on LAN).</p>
+
+      <h2>Your rights</h2>
+      <p>You may request access, rectification, erasure, objection, restriction and, where applicable, portability at <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>. We respond within legal deadlines.</p>
+      <p>You may also lodge a complaint with your local supervisory authority (in Spain: <a href="https://www.aepd.es" rel="noopener noreferrer" target="_blank">AEPD</a>).</p>
+
+      <h2>Children</h2>
+      <p>The app is not directed at children under 13. If we learn we hold such data without a valid basis, we will delete it.</p>
+
+      <h2>Security</h2>
+      <p>We apply reasonable measures (encryption in transit when online, OS-protected local storage, and end-to-end encryption where stated). No system is 100% secure.</p>
+
+      <h2>Changes</h2>
+      <p>We may update this policy. The “Last updated” date reflects changes. Material updates will also be reflected in the store listing when applicable.</p>
+
+      <h2>Notice</h2>
+      <p class="note">This document describes actual processing and supports GDPR compliance. It is not personalised legal advice.</p>
 
     </article>
-    <p class="back"><a href="https://cristianoqa.github.io/">← Flow Home Apps</a></p>
+    <footer>Flow Home Apps · Miravista</footer>
   </main>
 </body>
 </html>
