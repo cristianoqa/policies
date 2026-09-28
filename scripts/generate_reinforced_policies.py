@@ -862,7 +862,6 @@ Actualización reforzada RGPD: {TODAY} (bases jurídicas, conservación, destina
 - Misiva: mensajetexto.html / misiva.html / misiva-pt.html
 - Miravista: miravista-es.html (EN/PT; screenmirror-* redirige)
 - Monexa: monexa-es.html / monexa.html / monexa-pt.html (+ términos)
-- Memio: memio-es.html / memio.html / memio-pt.html
 - Lunera: lunera-es.html / lunera.html / lunera-pt.html (+ términos)
 - ReformaPRO: reformapro-es.html / reformapro.html / reformapro-pt.html
 
@@ -881,7 +880,7 @@ def main():
     reformapro()
     misiva()
     monexa()
-    memio()
+    # memio()  # discontinuada
     miravista()
     update_index_and_readme()
     print("OK")
