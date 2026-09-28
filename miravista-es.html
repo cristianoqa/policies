@@ -1,12 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Política de privacidad — Miravista</title>
-  <meta name="description" content="Política de privacidad — Miravista" />
+  <meta name="description" content="Política de privacidad — Miravista (Flow Home Apps)." />
   <style>
     :root { --bg:#f4f7fb; --ink:#0d2847; --muted:#4a5d73; --card:#fff; --accent:#1a6b9a; --line:#d5e0ec; }
+
     * { box-sizing: border-box; }
     body {
       margin:0;
@@ -38,48 +39,76 @@
     ul { padding-left:1.2rem; }
     table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem; }
     th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
-    th { background:#eef4f9; }
-    .back { margin-top:1.5rem; }
-    .back a { color:var(--accent); font-weight:600; }
+    th { background:rgba(0,0,0,.04); }
+    hr { border:0; border-top:1px solid var(--line); margin:1.25rem 0; }
+    footer { margin-top:1.5rem; color:var(--muted); font-size:.9rem; }
+    a { color:var(--accent); }
+    .note { font-size:.92rem; color:var(--muted); }
 
   </style>
 </head>
 <body>
   <main>
-    <h1>Política de privacidad — Miravista</h1>
-    <p class="meta">Responsable: Flow Home Apps · Contacto: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Última actualización: 7 ago 2026</p>
-    <nav class="langs" aria-label="Language">
-        <a href="./miravista.html">English</a>
+    <header>
+      <h1>Política de privacidad — Miravista</h1>
+      <p class="meta"><strong>Responsable:</strong> Flow Home Apps · <strong>Contacto:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Última actualización: 28 sep 2026</p>
+      <nav class="langs" aria-label="Language"><a href="./miravista.html">English</a>
         <a href="./miravista-es.html" aria-current="page">Español</a>
-        <a href="./miravista-pt.html">Português</a>
-    </nav>
+        <a href="./miravista-pt.html">Português</a></nav>
+      
+    </header>
     <article>
+
       <h2>Resumen</h2>
-      <p>Miravista transmite la pantalla (y, si lo permites, audio de reproducción de apps) <strong>solo en tu red Wi‑Fi local</strong>. No opera servidores en la nube para el mirroring y no vende datos personales.</p>
-      <h2>Datos que se usan</h2>
+      <p>Miravista transmite la pantalla (y audio de reproducción si lo permites) <strong>solo en tu Wi‑Fi local</strong>. No opera servidores en la nube para el mirroring.</p>
+      <hr />
+      <h2>Datos</h2>
       <table>
         <tr><th>Dato</th><th>Finalidad</th><th>Dónde</th></tr>
-        <tr><td>Contenido de la pantalla</td><td>Stream MJPEG al navegador de la TV</td><td>Dispositivo + LAN</td></tr>
-        <tr><td>Audio de reproducción (opcional)</td><td>Stream PCM vía AudioPlaybackCapture</td><td>Con permiso y MediaProjection</td></tr>
-        <tr><td>IP local</td><td>URL y código QR</td><td>Solo en el dispositivo</td></tr>
-        <tr><td>PIN de sesión</td><td>Autenticar el stream local</td><td>Generado en el dispositivo</td></tr>
+        <tr><td>Contenido de pantalla</td><td>Stream MJPEG</td><td>Dispositivo + LAN</td></tr>
+        <tr><td>Audio (opcional)</td><td>Stream PCM</td><td>Con MediaProjection</td></tr>
+        <tr><td>IP local / PIN</td><td>URL y autenticación local</td><td>Dispositivo</td></tr>
       </table>
-      <h2>Qué no hacemos</h2>
-      <ul>
-        <li>No enviamos captura ni audio a servidores de Miravista.</li>
-        <li>No usamos cuentas ni analítica de terceros en esta versión.</li>
-        <li>No pedimos ubicación precisa.</li>
-        <li>No usamos superposición sobre otras apps.</li>
-      </ul>
       <h2>Red local</h2>
-      <p>El servidor HTTP embebido escucha en el puerto <strong>8080</strong> de tu Wi‑Fi. Quien tenga la URL con PIN puede ver el stream. Detén el mirroring cuando no lo uses. No compartas la URL fuera de casa.</p>
-      <h2>DRM</h2>
-      <p>Algunas apps (vídeo/música con protección) pueden no enviar vídeo o audio al espejo. Es una limitación del sistema Android, no un fallo de privacidad.</p>
-      <h2>Contacto</h2>
-      <p><a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a></p>
+      <p>Servidor HTTP en el puerto <strong>8080</strong>. Quien tenga la URL con PIN puede ver el stream. Detén el mirroring cuando no lo uses.</p>
+
+      <h2>Responsable del tratamiento</h2>
+      <p><strong>Flow Home Apps</strong> (proyecto de desarrollo de aplicaciones independientes). Contacto de privacidad: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>. Si necesitas el NIF u otros datos identificativos del responsable para ejercer derechos, solicítalos por ese correo.</p>
+
+      <h2>Base jurídica (RGPD)</h2>
+      <ul>
+        <li><strong>Ejecución del servicio</strong> (art. 6.1.b): espejo local que inicias tú.</li>
+        <li><strong>Consentimiento</strong> (art. 6.1.a): captura de pantalla/audio (MediaProjection).</li>
+      </ul>
+
+      <h2>Conservación</h2>
+      <p>El stream es en tiempo real; no almacenamos capturas en servidores de Miravista. Preferencias locales hasta desinstalar.</p>
+
+      <h2>Destinatarios y encargados</h2>
+      <p>Solo dispositivos de tu LAN a los que des acceso (URL+PIN). No hay analytics de terceros en esta versión.</p>
+      <p>No vendemos datos personales ni los cedemos para publicidad de terceros.</p>
+
+      <h2>Transferencias internacionales</h2>
+      <p>Sin transferencias internacionales: el tráfico no sale de tu red local en el uso previsto.</p>
+
+      <h2>Tus derechos</h2>
+      <p>Puedes ejercer acceso, rectificación, borrado, oposición, limitación y, cuando aplique, portabilidad, escribiendo a <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>. Responderemos en el plazo legal.</p>
+      <p>También puedes presentar una reclamación ante la <a href="https://www.aepd.es" rel="noopener noreferrer" target="_blank">Agencia Española de Protección de Datos (AEPD)</a>.</p>
+
+      <h2>Menores</h2>
+      <p>La app no está dirigida a menores de 13 años. Si detectamos datos de un menor sin base adecuada, los eliminaremos.</p>
+
+      <h2>Seguridad</h2>
+      <p>Aplicamos medidas técnicas razonables (cifrado en tránsito cuando hay red, almacenamiento local protegido por el sistema, y cifrado de extremo a extremo cuando la función lo indica). Ningún sistema es 100&nbsp;% seguro.</p>
+
+      <h2>Cambios</h2>
+      <p>Podemos actualizar esta política. La fecha de «Última actualización» refleja el cambio. Si el cambio es relevante, lo reflejaremos también en la ficha de la tienda cuando aplique.</p>
+
+      <h2>Aviso</h2>
+      <p class="note">Este documento describe el tratamiento real de la app y ayuda a cumplir el RGPD/LOPDGDD. No sustituye asesoramiento jurídico personalizado.</p>
 
     </article>
-    <p class="back"><a href="https://cristianoqa.github.io/">← Flow Home Apps</a></p>
+    <footer>Flow Home Apps · Miravista</footer>
   </main>
 </body>
 </html>

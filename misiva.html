@@ -4,9 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy policy — Misiva</title>
-  <meta name="description" content="Privacy policy for Misiva by Flow Home Apps." />
+  <meta name="description" content="Privacy policy — Misiva (Flow Home Apps)." />
   <style>
     :root { --bg:#f4f7fb; --ink:#0d2847; --muted:#4a5d73; --card:#fff; --accent:#1a6b9a; --line:#d5e0ec; }
+
     * { box-sizing: border-box; }
     body {
       margin:0;
@@ -38,84 +39,77 @@
     ul { padding-left:1.2rem; }
     table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem; }
     th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
-    th { background:#eef4f9; }
+    th { background:rgba(0,0,0,.04); }
     hr { border:0; border-top:1px solid var(--line); margin:1.25rem 0; }
     footer { margin-top:1.5rem; color:var(--muted); font-size:.9rem; }
     a { color:var(--accent); }
+    .note { font-size:.92rem; color:var(--muted); }
+
   </style>
 </head>
 <body>
   <main>
     <header>
       <h1>Privacy policy — Misiva</h1>
-      <p class="meta"><strong>Controller:</strong> Flow Home Apps · <strong>Contact:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Last updated: 5 Aug 2026</p>
-      <nav class="langs" aria-label="Language">
-        <a href="./misiva.html" aria-current="page">English</a>
+      <p class="meta"><strong>Controller:</strong> Flow Home Apps · <strong>Contact:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Last updated: 28 Sep 2026</p>
+      <nav class="langs" aria-label="Language"><a href="./misiva.html" aria-current="page">English</a>
         <a href="./mensajetexto.html">Español</a>
-        <a href="./misiva-pt.html">Português</a>
-      </nav>
+        <a href="./misiva-pt.html">Português</a></nav>
+      
     </header>
     <article>
+
       <h2>Summary</h2>
-      <p>Misiva (formerly MensajeTexto) is an Android app that generates messages with Google Gemini and sends them via WhatsApp according to schedules you define. Data is processed and stored <strong>on your device</strong>. We do not run our own servers that receive your messages.</p>
+      <p>Misiva generates messages with Google Gemini and sends them via WhatsApp on schedules you define. App data stays <strong>on your device</strong>. We do not run our own servers that receive your message content.</p>
       <hr />
-      <h2>Data we process</h2>
-      <table>
-        <thead><tr><th>Data</th><th>Use</th><th>Storage</th></tr></thead>
-        <tbody>
-          <tr><td>Recipient phone numbers</td><td>Send WhatsApp messages</td><td>Local database</td></tr>
-          <tr><td>Phone contacts (optional)</td><td>Autocomplete when creating a send</td><td>On-device read only; not uploaded</td></tr>
-          <tr><td>AI prompts / instructions</td><td>Generate text with Gemini</td><td>Local database</td></tr>
-          <tr><td>Gemini API key</td><td>Calls to Google API</td><td>Encrypted on device</td></tr>
-          <tr><td>Send history</td><td>Show history in the app</td><td>Local database</td></tr>
-          <tr><td>Preferences (language, onboarding, confirm before send)</td><td>App settings</td><td>Local storage</td></tr>
-          <tr><td>Deferred send queue</td><td>Retry if the phone was locked</td><td>Local prefs (limited TTL)</td></tr>
-        </tbody>
-      </table>
-      <h2>Data we do NOT collect</h2>
+      <h2>Data processed</h2>
       <ul>
-        <li>We do not read or store third-party WhatsApp conversations.</li>
-        <li>We do not sell or share data with advertisers.</li>
-        <li>We do not upload your messages to our servers.</li>
-        <li>We do not use third-party analytics or ads.</li>
+        <li>Recipient numbers, optional contacts, prompts, Gemini API key (encrypted on device), send history/queue.</li>
       </ul>
-      <h2>Third-party services</h2>
+      <h2>Third parties</h2>
       <ul>
-        <li><strong>Google Gemini API:</strong> if you set an API key, prompts are sent to Google to generate text. See <a href="https://policies.google.com/privacy">Google’s privacy policy</a>.</li>
-        <li><strong>WhatsApp (Meta):</strong> the app opens WhatsApp on your device. Misiva does not access Meta’s servers.</li>
+        <li><strong>Google Gemini:</strong> prompts go to Google if you set an API key.</li>
+        <li><strong>WhatsApp (Meta):</strong> opened on your device.</li>
       </ul>
-      <h2>Accessibility service</h2>
-      <p>Misiva uses an <strong>AccessibilityService</strong> only to automate sending in WhatsApp (find and tap Send). It:</p>
+      <h2>AccessibilityService</h2>
+      <p>Only to automate tapping Send in WhatsApp at schedule/confirmation time. Not used to scrape other apps or upload content to Flow Home Apps servers.</p>
+
+      <h2>Data controller</h2>
+      <p><strong>Flow Home Apps</strong> (independent app project). Privacy contact: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>. Tax ID or further controller details can be requested by email when exercising your rights.</p>
+
+      <h2>Legal bases (GDPR)</h2>
       <ul>
-        <li>Only acts when a scheduled send is due or you confirm from a notification.</li>
-        <li>Does not read unrelated screens for other purposes.</li>
-        <li>Does not transmit other apps’ content to external servers.</li>
+        <li><strong>Contract/service</strong> (Art. 6(1)(b)).</li>
+        <li><strong>Consent</strong> (Art. 6(1)(a)) for API key, contacts, AccessibilityService, notifications.</li>
+        <li><strong>Legitimate interest</strong> (Art. 6(1)(f)) for local security and support.</li>
       </ul>
-      <p>You must enable the service manually in Settings → Accessibility.</p>
-      <h2>Permissions</h2>
-      <table>
-        <thead><tr><th>Permission</th><th>Reason</th></tr></thead>
-        <tbody>
-          <tr><td>Internet</td><td>Gemini API calls</td></tr>
-          <tr><td>Notifications</td><td>Alerts when a message is ready, fails, or unlock is needed</td></tr>
-          <tr><td>Exact alarms</td><td>Fire scheduled sends on time</td></tr>
-          <tr><td>Boot completed</td><td>Reschedule alarms after reboot</td></tr>
-          <tr><td>Foreground service</td><td>Keep send active while WhatsApp opens</td></tr>
-          <tr><td>Contacts (optional)</td><td>Only if you enable “Use my contacts”</td></tr>
-        </tbody>
-      </table>
-      <h2>Retention and deletion</h2>
-      <ul>
-        <li>You can clear history and delete scheduled sends and the API key in the app.</li>
-        <li>Deferred sends expire automatically (limited window).</li>
-        <li>Uninstalling removes all local data.</li>
-      </ul>
-      <h2>Backups</h2>
-      <p><code>allowBackup=false</code>: app data is not included in Google backups by default.</p>
+
+      <h2>Retention</h2>
+      <p>Until you clear data or uninstall. Deferred sends expire. allowBackup=false.</p>
+
+      <h2>Recipients and processors</h2>
+      <p>Google (Gemini) if API key used; WhatsApp via the app you open. We do not host your message content.</p>
+      <p>We do not sell personal data or share it for third-party advertising.</p>
+
+      <h2>International transfers</h2>
+      <p>Gemini calls may involve Google processing outside the EEA.</p>
+
+      <h2>Your rights</h2>
+      <p>You may request access, rectification, erasure, objection, restriction and, where applicable, portability at <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>. We respond within legal deadlines.</p>
+      <p>You may also lodge a complaint with your local supervisory authority (in Spain: <a href="https://www.aepd.es" rel="noopener noreferrer" target="_blank">AEPD</a>).</p>
+
       <h2>Children</h2>
-      <p>The app is not directed at children under 13.</p>
+      <p>The app is not directed at children under 13. If we learn we hold such data without a valid basis, we will delete it.</p>
+
+      <h2>Security</h2>
+      <p>We apply reasonable measures (encryption in transit when online, OS-protected local storage, and end-to-end encryption where stated). No system is 100% secure.</p>
+
       <h2>Changes</h2>
-      <p>We will publish updates before relevant releases. The date above will change.</p>
+      <p>We may update this policy. The “Last updated” date reflects changes. Material updates will also be reflected in the store listing when applicable.</p>
+
+      <h2>Notice</h2>
+      <p class="note">This document describes actual processing and supports GDPR compliance. It is not personalised legal advice.</p>
+
     </article>
     <footer>Flow Home Apps · Misiva</footer>
   </main>

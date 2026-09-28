@@ -4,9 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy policy — MyPass</title>
-  <meta name="description" content="Privacy policy for MyPass password vault by Flow Home Apps." />
+  <meta name="description" content="Privacy policy — MyPass (Flow Home Apps)." />
   <style>
     :root { --bg:#f4f7fb; --ink:#0d2847; --muted:#4a5d73; --card:#fff; --accent:#1a6b9a; --line:#d5e0ec; }
+
     * { box-sizing: border-box; }
     body {
       margin:0;
@@ -38,50 +39,77 @@
     ul { padding-left:1.2rem; }
     table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.95rem; }
     th, td { border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top; }
-    th { background:#eef4f9; }
+    th { background:rgba(0,0,0,.04); }
     hr { border:0; border-top:1px solid var(--line); margin:1.25rem 0; }
     footer { margin-top:1.5rem; color:var(--muted); font-size:.9rem; }
     a { color:var(--accent); }
+    .note { font-size:.92rem; color:var(--muted); }
+
   </style>
 </head>
 <body>
   <main>
     <header>
       <h1>Privacy policy — MyPass</h1>
-      <p class="meta"><strong>Controller:</strong> Flow Home Apps · <strong>Contact:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Last updated: 4 Aug 2026</p>
-      <nav class="langs" aria-label="Language">
-        <a href="./mypass.html" aria-current="page">English</a>
+      <p class="meta"><strong>Controller:</strong> Flow Home Apps · <strong>Contact:</strong> <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a><br />Last updated: 28 Sep 2026</p>
+      <nav class="langs" aria-label="Language"><a href="./mypass.html" aria-current="page">English</a>
         <a href="./mypass-es.html">Español</a>
-        <a href="./mypass-pt.html">Português</a>
-      </nav>
+        <a href="./mypass-pt.html">Português</a></nav>
+      
     </header>
     <article>
+
       <h2>What MyPass is</h2>
-      <p>MyPass is a <strong>password vault encrypted on your device</strong>. Your <strong>master password</strong> is not sent to us in readable form. There is <strong>no remote email/SMS reset</strong> of the master password; recovery on-device uses your <strong>Recovery Key</strong> (if you saved it) plus encrypted backups. <strong>Cloud copy</strong> (Supabase, if you enable it) is <strong>optional</strong> and uploads <strong>already encrypted</strong> data only.</p>
+      <p>MyPass is an <strong>on-device encrypted password vault</strong>. The master password is never sent in clear text. Cloud backup (Supabase) is <strong>optional</strong> and uploads only <strong>already encrypted</strong> data.</p>
       <hr />
-      <h2>Data that stays on the device</h2>
+      <h2>On-device data</h2>
       <ul>
-        <li>Credentials and master password in memory only while you use the app.</li>
-        <li>Encrypted vault and preferences (auto-lock, language, etc.) in platform secure storage.</li>
-        <li>Biometrics: the OS handles fingerprint/face; MyPass does not store biometric images.</li>
+        <li>Credentials and master password in memory only while using the app.</li>
+        <li>Encrypted vault and preferences in secure storage.</li>
+        <li>Biometrics: OS-managed; MyPass does not store biometric images.</li>
       </ul>
-      <h2>If you enable cloud copy</h2>
+      <h2>If you enable cloud backup</h2>
       <ul>
-        <li><strong>Account:</strong> session identity (email or OAuth per your Supabase project).</li>
-        <li><strong>What is uploaded:</strong> <strong>encrypted</strong> vault blob and revision metadata (timestamps). Your <strong>master password and readable passwords are not sent</strong>.</li>
-        <li><strong>Backend operator:</strong> you or whoever runs the Supabase project linked to the build.</li>
+        <li>Session identity (email or OAuth).</li>
+        <li>Encrypted vault + revision metadata. Master password and plaintext secrets are <strong>not</strong> uploaded.</li>
       </ul>
-      <h2>App permissions (Android)</h2>
+
+      <h2>Data controller</h2>
+      <p><strong>Flow Home Apps</strong> (independent app project). Privacy contact: <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>. Tax ID or further controller details can be requested by email when exercising your rights.</p>
+
+      <h2>Legal bases (GDPR)</h2>
       <ul>
-        <li><strong>Internet:</strong> only when you use cloud sync or OAuth.</li>
-        <li><strong>Biometrics:</strong> optional unlock on the device.</li>
+        <li><strong>Contract/service</strong> (Art. 6(1)(b)): local vault.</li>
+        <li><strong>Consent</strong> (Art. 6(1)(a)): optional sync, OAuth, biometrics.</li>
+        <li><strong>Legitimate interest</strong> (Art. 6(1)(f)): security and support.</li>
       </ul>
+
+      <h2>Retention</h2>
+      <p>Local until vault wipe/uninstall. Cloud while the account exists or until deletion is requested.</p>
+
+      <h2>Recipients and processors</h2>
+      <p>No sync: device only. With sync: Supabase; with OAuth: identity provider.</p>
+      <p>We do not sell personal data or share it for third-party advertising.</p>
+
+      <h2>International transfers</h2>
+      <p>Sync/OAuth may involve processing outside the EEA under provider safeguards.</p>
+
       <h2>Your rights</h2>
-      <p>You can delete local data with “Delete vault” or by uninstalling. For cloud data, delete the account or storage objects in your Supabase project per your retention policy.</p>
+      <p>You may request access, rectification, erasure, objection, restriction and, where applicable, portability at <a href="mailto:soporte.flowhomeapps@gmail.com">soporte.flowhomeapps@gmail.com</a>. We respond within legal deadlines.</p>
+      <p>You may also lodge a complaint with your local supervisory authority (in Spain: <a href="https://www.aepd.es" rel="noopener noreferrer" target="_blank">AEPD</a>).</p>
+
+      <h2>Children</h2>
+      <p>The app is not directed at children under 13. If we learn we hold such data without a valid basis, we will delete it.</p>
+
+      <h2>Security</h2>
+      <p>We apply reasonable measures (encryption in transit when online, OS-protected local storage, and end-to-end encryption where stated). No system is 100% secure.</p>
+
       <h2>Changes</h2>
-      <p>We will publish updates in the app and, where required, at the policy URL listed on Google Play.</p>
-      <h2>Legal notice</h2>
-      <p>This text describes how the app works technically; it is not a substitute for personal legal advice.</p>
+      <p>We may update this policy. The “Last updated” date reflects changes. Material updates will also be reflected in the store listing when applicable.</p>
+
+      <h2>Notice</h2>
+      <p class="note">This document describes actual processing and supports GDPR compliance. It is not personalised legal advice.</p>
+
     </article>
     <footer>Flow Home Apps · MyPass</footer>
   </main>
